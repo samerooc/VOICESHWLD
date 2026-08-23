@@ -1,0 +1,264 @@
+{
+  "title": "VoiceShield SIH Demo & Evaluation Summary",
+  "system_status": "All 9 Phases Complete & Verified",
+  "model_architecture": "StandardScaler + RandomForest (42 Acoustic Features)",
+  "decision_threshold": 0.4,
+  "evaluation_metrics": {
+    "timestamp_utc": "2026-08-22T14:44:34.321503+00:00",
+    "is_preliminary": true,
+    "model_name": "VoiceShield Baseline v1 (MFCC + StandardScaler + RandomForest)",
+    "training_dataset_hash": "8efb6e96e97ac41a910e7bfb73cfa49d33cdc1ab5280a0b68c5246512eb856c8",
+    "decision_threshold_used": 0.4,
+    "total_test_samples": 14,
+    "bona_fide_samples": 7,
+    "spoof_samples": 7,
+    "overall_metrics": {
+      "accuracy": 0.9286,
+      "balanced_accuracy": 0.9286,
+      "macro_f1": 0.9282,
+      "roc_auc": 1.0,
+      "false_positive_rate": 0.1429,
+      "false_negative_rate": 0.0,
+      "false_positive_count": 1,
+      "false_negative_count": 0
+    },
+    "per_class_metrics": {
+      "bona_fide": {
+        "precision": 1.0,
+        "recall": 0.8571,
+        "f1_score": 0.9231
+      },
+      "spoof": {
+        "precision": 0.875,
+        "recall": 1.0,
+        "f1_score": 0.9333
+      }
+    },
+    "confusion_matrix": {
+      "true_negatives_bona_fide": 6,
+      "false_positives_spoof": 1,
+      "false_negatives_bona_fide": 0,
+      "true_positives_spoof": 7,
+      "matrix_2x2": [
+        [
+          6,
+          1
+        ],
+        [
+          0,
+          7
+        ]
+      ]
+    },
+    "false_positive_count": 1,
+    "false_negative_count": 0,
+    "roc_curve": {
+      "fpr": [
+        0.0,
+        0.0,
+        0.0,
+        1.0
+      ],
+      "tpr": [
+        0.0,
+        0.4286,
+        1.0,
+        1.0
+      ],
+      "thresholds": [
+        1.0,
+        0.64,
+        0.52,
+        0.16
+      ]
+    },
+    "per_file_results": [
+      {
+        "file": "data/test/ai_voice/1.wav",
+        "true_class": "spoof",
+        "predicted_class": "spoof",
+        "ai_probability": 62.0,
+        "is_correct": true
+      },
+      {
+        "file": "data/test/ai_voice/2.wav",
+        "true_class": "spoof",
+        "predicted_class": "spoof",
+        "ai_probability": 64.0,
+        "is_correct": true
+      },
+      {
+        "file": "data/test/ai_voice/3.wav",
+        "true_class": "spoof",
+        "predicted_class": "spoof",
+        "ai_probability": 52.0,
+        "is_correct": true
+      },
+      {
+        "file": "data/test/ai_voice/4.wav",
+        "true_class": "spoof",
+        "predicted_class": "spoof",
+        "ai_probability": 58.0,
+        "is_correct": true
+      },
+      {
+        "file": "data/test/ai_voice/5.wav",
+        "true_class": "spoof",
+        "predicted_class": "spoof",
+        "ai_probability": 64.0,
+        "is_correct": true
+      },
+      {
+        "file": "data/test/ai_voice/6.wav",
+        "true_class": "spoof",
+        "predicted_class": "spoof",
+        "ai_probability": 64.0,
+        "is_correct": true
+      },
+      {
+        "file": "data/test/ai_voice/7.wav",
+        "true_class": "spoof",
+        "predicted_class": "spoof",
+        "ai_probability": 54.0,
+        "is_correct": true
+      },
+      {
+        "file": "data/test/human/01.wav",
+        "true_class": "bona_fide",
+        "predicted_class": "bona_fide",
+        "ai_probability": 34.0,
+        "is_correct": true
+      },
+      {
+        "file": "data/test/human/02.wav",
+        "true_class": "bona_fide",
+        "predicted_class": "spoof",
+        "ai_probability": 44.0,
+        "is_correct": false
+      },
+      {
+        "file": "data/test/human/03.wav",
+        "true_class": "bona_fide",
+        "predicted_class": "bona_fide",
+        "ai_probability": 26.0,
+        "is_correct": true
+      },
+      {
+        "file": "data/test/human/4.wav",
+        "true_class": "bona_fide",
+        "predicted_class": "bona_fide",
+        "ai_probability": 18.0,
+        "is_correct": true
+      },
+      {
+        "file": "data/test/human/5.wav",
+        "true_class": "bona_fide",
+        "predicted_class": "bona_fide",
+        "ai_probability": 16.0,
+        "is_correct": true
+      },
+      {
+        "file": "data/test/human/6.wav",
+        "true_class": "bona_fide",
+        "predicted_class": "bona_fide",
+        "ai_probability": 24.0,
+        "is_correct": true
+      },
+      {
+        "file": "data/test/human/7.wav",
+        "true_class": "bona_fide",
+        "predicted_class": "bona_fide",
+        "ai_probability": 30.0,
+        "is_correct": true
+      }
+    ],
+    "production_reliability_disclaimer": "RESEARCH PROTOTYPE NOTICE: Scores and accuracy metrics are benchmark figures on a small hackathon research dataset and DO NOT constitute proof of production reliability. Real-world telephony noise, codec compression, and novel generative vocoders require human-in-the-loop review."
+  },
+  "validation_metrics": {
+    "timestamp_utc": "2026-08-22T14:44:32.896705+00:00",
+    "is_preliminary": true,
+    "validation_samples": 3,
+    "optimal_decision_threshold": 0.4,
+    "accuracy": 1.0,
+    "balanced_accuracy": 1.0,
+    "precision": 1.0,
+    "recall": 1.0,
+    "f1_score": 1.0,
+    "roc_auc": 1.0,
+    "confusion_matrix": {
+      "true_negatives_bona_fide": 2,
+      "false_positives_spoof": 0,
+      "false_negatives_bona_fide": 0,
+      "true_positives_spoof": 1,
+      "matrix_2x2": [
+        [
+          2,
+          0
+        ],
+        [
+          0,
+          1
+        ]
+      ]
+    },
+    "false_positive_count": 0,
+    "false_negative_count": 0,
+    "disclaimer": "RESEARCH PROTOTYPE NOTICE: Scores and accuracy metrics are benchmark figures on a small hackathon research dataset and DO NOT constitute proof of production reliability. Real-world telephony noise, codec compression, and novel generative vocoders require human-in-the-loop review."
+  },
+  "benchmark_summary": {
+    "benchmark_timestamp": "2026-08-22 20:14:46",
+    "trials_per_sample": 5,
+    "results": [
+      {
+        "scenario": "Bona Fide Human Voice (01.wav)",
+        "category": "bona_fide",
+        "duration_sec": 26.27,
+        "median_feature_extraction_ms": 57.76,
+        "median_inference_ms": 2.25,
+        "median_total_ms": 59.96,
+        "p95_total_ms": 710.71,
+        "ram_mb": 145.0
+      },
+      {
+        "scenario": "Bona Fide Human Voice (02.wav)",
+        "category": "bona_fide",
+        "duration_sec": 12.31,
+        "median_feature_extraction_ms": 12.13,
+        "median_inference_ms": 1.97,
+        "median_total_ms": 14.1,
+        "p95_total_ms": 17.66,
+        "ram_mb": 145.0
+      },
+      {
+        "scenario": "Synthetic AI Spoof Voice (1.wav)",
+        "category": "spoof",
+        "duration_sec": 37.85,
+        "median_feature_extraction_ms": 29.75,
+        "median_inference_ms": 2.24,
+        "median_total_ms": 32.18,
+        "p95_total_ms": 32.99,
+        "ram_mb": 145.0
+      },
+      {
+        "scenario": "Synthetic AI Spoof Voice (2.wav)",
+        "category": "spoof",
+        "duration_sec": 35.94,
+        "median_feature_extraction_ms": 28.16,
+        "median_inference_ms": 2.21,
+        "median_total_ms": 30.42,
+        "p95_total_ms": 30.63,
+        "ram_mb": 145.0
+      }
+    ],
+    "invalid_rejection_ms": 1.84,
+    "disclaimer": "Local prototype performance on CPU; not a production latency benchmark."
+  },
+  "ethical_safeguards": {
+    "no_raw_audio_retention": true,
+    "no_automatic_blocking": true,
+    "uncertainty_band_active": true,
+    "out_of_distribution_active": true,
+    "statutory_disclaimer_present": true
+  },
+  "disclaimer": "Experimental decision-support prototype; not identity proof."
+}

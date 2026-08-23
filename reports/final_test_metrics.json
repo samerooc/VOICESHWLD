@@ -1,0 +1,177 @@
+{
+  "timestamp_utc": "2026-08-22T16:41:28.776481+00:00",
+  "is_preliminary": true,
+  "model_name": "VoiceShield Baseline v1 (MFCC + StandardScaler + RandomForest)",
+  "training_dataset_hash": "8efb6e96e97ac41a910e7bfb73cfa49d33cdc1ab5280a0b68c5246512eb856c8",
+  "decision_threshold_used": 0.5,
+  "total_test_samples": 14,
+  "bona_fide_samples": 7,
+  "spoof_samples": 7,
+  "overall_metrics": {
+    "accuracy": 1.0,
+    "balanced_accuracy": 1.0,
+    "macro_f1": 1.0,
+    "roc_auc": 1.0,
+    "false_positive_rate": 0.0,
+    "false_negative_rate": 0.0,
+    "false_positive_count": 0,
+    "false_negative_count": 0
+  },
+  "per_class_metrics": {
+    "bona_fide": {
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1_score": 1.0
+    },
+    "spoof": {
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1_score": 1.0
+    }
+  },
+  "confusion_matrix": {
+    "true_negatives_bona_fide": 7,
+    "false_positives_spoof": 0,
+    "false_negatives_bona_fide": 0,
+    "true_positives_spoof": 7,
+    "matrix_2x2": [
+      [
+        7,
+        0
+      ],
+      [
+        0,
+        7
+      ]
+    ]
+  },
+  "false_positive_count": 0,
+  "false_negative_count": 0,
+  "roc_curve": {
+    "fpr": [
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      1.0
+    ],
+    "tpr": [
+      0.0,
+      0.1429,
+      0.2857,
+      0.8571,
+      1.0,
+      1.0
+    ],
+    "thresholds": [
+      1.0,
+      0.695,
+      0.6925,
+      0.6525,
+      0.6138,
+      0.04
+    ]
+  },
+  "per_file_results": [
+    {
+      "file": "data/test/ai_voice/1.wav",
+      "true_class": "spoof",
+      "predicted_class": "spoof",
+      "ai_probability": 65.25,
+      "is_correct": true
+    },
+    {
+      "file": "data/test/ai_voice/2.wav",
+      "true_class": "spoof",
+      "predicted_class": "spoof",
+      "ai_probability": 69.25,
+      "is_correct": true
+    },
+    {
+      "file": "data/test/ai_voice/3.wav",
+      "true_class": "spoof",
+      "predicted_class": "spoof",
+      "ai_probability": 61.38,
+      "is_correct": true
+    },
+    {
+      "file": "data/test/ai_voice/4.wav",
+      "true_class": "spoof",
+      "predicted_class": "spoof",
+      "ai_probability": 69.5,
+      "is_correct": true
+    },
+    {
+      "file": "data/test/ai_voice/5.wav",
+      "true_class": "spoof",
+      "predicted_class": "spoof",
+      "ai_probability": 68.0,
+      "is_correct": true
+    },
+    {
+      "file": "data/test/ai_voice/6.wav",
+      "true_class": "spoof",
+      "predicted_class": "spoof",
+      "ai_probability": 68.0,
+      "is_correct": true
+    },
+    {
+      "file": "data/test/ai_voice/7.wav",
+      "true_class": "spoof",
+      "predicted_class": "spoof",
+      "ai_probability": 65.25,
+      "is_correct": true
+    },
+    {
+      "file": "data/test/human/01.wav",
+      "true_class": "bona_fide",
+      "predicted_class": "bona_fide",
+      "ai_probability": 28.0,
+      "is_correct": true
+    },
+    {
+      "file": "data/test/human/02.wav",
+      "true_class": "bona_fide",
+      "predicted_class": "bona_fide",
+      "ai_probability": 40.0,
+      "is_correct": true
+    },
+    {
+      "file": "data/test/human/03.wav",
+      "true_class": "bona_fide",
+      "predicted_class": "bona_fide",
+      "ai_probability": 7.25,
+      "is_correct": true
+    },
+    {
+      "file": "data/test/human/4.wav",
+      "true_class": "bona_fide",
+      "predicted_class": "bona_fide",
+      "ai_probability": 4.0,
+      "is_correct": true
+    },
+    {
+      "file": "data/test/human/5.wav",
+      "true_class": "bona_fide",
+      "predicted_class": "bona_fide",
+      "ai_probability": 19.75,
+      "is_correct": true
+    },
+    {
+      "file": "data/test/human/6.wav",
+      "true_class": "bona_fide",
+      "predicted_class": "bona_fide",
+      "ai_probability": 25.12,
+      "is_correct": true
+    },
+    {
+      "file": "data/test/human/7.wav",
+      "true_class": "bona_fide",
+      "predicted_class": "bona_fide",
+      "ai_probability": 27.87,
+      "is_correct": true
+    }
+  ],
+  "production_reliability_disclaimer": "RESEARCH PROTOTYPE NOTICE: Scores and accuracy metrics are benchmark figures on a small hackathon research dataset and DO NOT constitute proof of production reliability. Real-world telephony noise, codec compression, and novel generative vocoders require human-in-the-loop review."
+}

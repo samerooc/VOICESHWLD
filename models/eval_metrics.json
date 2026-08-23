@@ -1,0 +1,160 @@
+{
+  "timestamp_utc": "2026-08-22T10:15:37.507961+00:00",
+  "total_test_samples": 14,
+  "test_human_samples": 7,
+  "test_ai_samples": 7,
+  "accuracy": 1.0,
+  "macro_f1": 1.0,
+  "roc_auc": 1.0,
+  "confusion_matrix": {
+    "true_negatives_human": 7,
+    "false_positives_ai": 0,
+    "false_negatives_human": 0,
+    "true_positives_ai": 7,
+    "matrix_2x2": [
+      [
+        7,
+        0
+      ],
+      [
+        0,
+        7
+      ]
+    ]
+  },
+  "per_class_metrics": {
+    "human": {
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1_score": 1.0
+    },
+    "ai_voice": {
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1_score": 1.0
+    }
+  },
+  "roc_curve": {
+    "fpr": [
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      1.0
+    ],
+    "tpr": [
+      0.0,
+      0.2857,
+      0.5714,
+      1.0,
+      1.0
+    ],
+    "thresholds": [
+      1.0,
+      0.77,
+      0.74,
+      0.69,
+      0.085
+    ]
+  },
+  "per_file_results": [
+    {
+      "file": "01.wav",
+      "true_label": "Human",
+      "predicted_label": "Human",
+      "ai_probability": 23.5,
+      "is_correct": true
+    },
+    {
+      "file": "02.wav",
+      "true_label": "Human",
+      "predicted_label": "Human",
+      "ai_probability": 38.0,
+      "is_correct": true
+    },
+    {
+      "file": "03.wav",
+      "true_label": "Human",
+      "predicted_label": "Human",
+      "ai_probability": 19.5,
+      "is_correct": true
+    },
+    {
+      "file": "4.wav",
+      "true_label": "Human",
+      "predicted_label": "Human",
+      "ai_probability": 8.5,
+      "is_correct": true
+    },
+    {
+      "file": "5.wav",
+      "true_label": "Human",
+      "predicted_label": "Human",
+      "ai_probability": 16.5,
+      "is_correct": true
+    },
+    {
+      "file": "6.wav",
+      "true_label": "Human",
+      "predicted_label": "Human",
+      "ai_probability": 30.5,
+      "is_correct": true
+    },
+    {
+      "file": "7.wav",
+      "true_label": "Human",
+      "predicted_label": "Human",
+      "ai_probability": 40.5,
+      "is_correct": true
+    },
+    {
+      "file": "1.wav",
+      "true_label": "AI Voice",
+      "predicted_label": "AI Voice",
+      "ai_probability": 69.0,
+      "is_correct": true
+    },
+    {
+      "file": "2.wav",
+      "true_label": "AI Voice",
+      "predicted_label": "AI Voice",
+      "ai_probability": 75.0,
+      "is_correct": true
+    },
+    {
+      "file": "3.wav",
+      "true_label": "AI Voice",
+      "predicted_label": "AI Voice",
+      "ai_probability": 69.0,
+      "is_correct": true
+    },
+    {
+      "file": "4.wav",
+      "true_label": "AI Voice",
+      "predicted_label": "AI Voice",
+      "ai_probability": 74.0,
+      "is_correct": true
+    },
+    {
+      "file": "5.wav",
+      "true_label": "AI Voice",
+      "predicted_label": "AI Voice",
+      "ai_probability": 77.0,
+      "is_correct": true
+    },
+    {
+      "file": "6.wav",
+      "true_label": "AI Voice",
+      "predicted_label": "AI Voice",
+      "ai_probability": 77.0,
+      "is_correct": true
+    },
+    {
+      "file": "7.wav",
+      "true_label": "AI Voice",
+      "predicted_label": "AI Voice",
+      "ai_probability": 69.0,
+      "is_correct": true
+    }
+  ]
+}

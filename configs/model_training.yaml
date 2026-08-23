@@ -1,0 +1,46 @@
+# VoiceShield Pretrained Speech Model Configuration (Section 5)
+version: "2.0.0"
+model_family: "pretrained_audio_encoder"
+
+candidate_backbones:
+  wavlm:
+    model_name: "microsoft/wavlm-base"
+    sample_rate: 16000
+    embedding_dim: 768
+  wav2vec2:
+    model_name: "facebook/wav2vec2-base"
+    sample_rate: 16000
+    embedding_dim: 768
+  hubert:
+    model_name: "facebook/hubert-base-ls960"
+    sample_rate: 16000
+    embedding_dim: 768
+  acoustic_spectral_net:
+    model_name: "voiceshield-acoustic-spectral-head"
+    sample_rate: 16000
+    embedding_dim: 128
+
+active_backbone: "wavlm"
+
+architecture:
+  pooling: "attentive_mean" # Options: mean, attentive_mean, max
+  dropout: 0.20
+  hidden_dims: [128, 64]
+  num_classes: 2
+  freeze_encoder: true
+
+training:
+  random_seed: 42
+  batch_size: 4
+  epochs: 25
+  learning_rate: 0.0003
+  weight_decay: 0.0001
+  early_stopping_patience: 5
+  gradient_clip_val: 1.0
+  device: "cpu" # Options: cpu, cuda
+
+paths:
+  manifest_path: "data/manifest.csv"
+  output_model_path: "models/pretrained_detector.pkl"
+  output_metadata_path: "models/pretrained_metadata.json"
+  training_log_path: "reports/training_log.json"

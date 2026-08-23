@@ -1,0 +1,453 @@
+[
+  {
+    "scenario": "Clean Evaluation Audio",
+    "sample_count": 14,
+    "accuracy": 0.9286,
+    "precision": 0.875,
+    "recall": 1.0,
+    "f1": 0.9333,
+    "roc_auc": 1.0,
+    "fpr": 0.1429,
+    "fnr": 0.0,
+    "uncertainty_rate": 0.2857,
+    "confusion_matrix": {
+      "TN": 6,
+      "FP": 1,
+      "FN": 0,
+      "TP": 7
+    },
+    "error_diagnostics": [
+      {
+        "file_identifier": "02.wav",
+        "true_label": "bona_fide",
+        "predicted_label": "spoof",
+        "raw_model_score": 0.44,
+        "calibrated_probability": 0.44,
+        "risk_band": "Review required",
+        "quality_diagnostics": {
+          "duration_seconds": 12.313,
+          "sample_rate": 16000,
+          "rms_energy": 0.108751,
+          "peak_amplitude": 1.0483,
+          "clipping_ratio": 0.0015,
+          "silence_ratio": 0.1473,
+          "snr_db": 60.0,
+          "zero_crossing_rate": 0.230864,
+          "num_samples": 197016,
+          "quality_flag": "acceptable"
+        },
+        "likely_failure_category": "Acoustic Ambiguity / Distribution Shift",
+        "recommended_next_action": "Request secondary out-of-band verification."
+      }
+    ]
+  },
+  {
+    "scenario": "Additive Background Noise (~15dB SNR)",
+    "sample_count": 14,
+    "accuracy": 0.5,
+    "precision": 0.0,
+    "recall": 0.0,
+    "f1": 0.0,
+    "roc_auc": 0.7143,
+    "fpr": 0.0,
+    "fnr": 1.0,
+    "uncertainty_rate": 0.0,
+    "confusion_matrix": {
+      "TN": 7,
+      "FP": 0,
+      "FN": 7,
+      "TP": 0
+    },
+    "error_diagnostics": [
+      {
+        "file_identifier": "1.wav",
+        "true_label": "spoof",
+        "predicted_label": "bona_fide",
+        "raw_model_score": 0.26,
+        "calibrated_probability": 0.26,
+        "risk_band": "Review required",
+        "quality_diagnostics": {
+          "duration_seconds": 37.852,
+          "sample_rate": 16000,
+          "rms_energy": 0.052994,
+          "peak_amplitude": 0.4651,
+          "clipping_ratio": 0.0,
+          "silence_ratio": 0.0026,
+          "snr_db": 10.97,
+          "zero_crossing_rate": 0.266231,
+          "num_samples": 605624,
+          "quality_flag": "acceptable"
+        },
+        "likely_failure_category": "Acoustic Ambiguity / Distribution Shift",
+        "recommended_next_action": "Request secondary out-of-band verification."
+      },
+      {
+        "file_identifier": "2.wav",
+        "true_label": "spoof",
+        "predicted_label": "bona_fide",
+        "raw_model_score": 0.26,
+        "calibrated_probability": 0.26,
+        "risk_band": "Review required",
+        "quality_diagnostics": {
+          "duration_seconds": 35.944,
+          "sample_rate": 16000,
+          "rms_energy": 0.049494,
+          "peak_amplitude": 0.3674,
+          "clipping_ratio": 0.0,
+          "silence_ratio": 0.0029,
+          "snr_db": 10.38,
+          "zero_crossing_rate": 0.276723,
+          "num_samples": 575112,
+          "quality_flag": "acceptable"
+        },
+        "likely_failure_category": "Acoustic Ambiguity / Distribution Shift",
+        "recommended_next_action": "Request secondary out-of-band verification."
+      },
+      {
+        "file_identifier": "3.wav",
+        "true_label": "spoof",
+        "predicted_label": "bona_fide",
+        "raw_model_score": 0.26,
+        "calibrated_probability": 0.26,
+        "risk_band": "Review required",
+        "quality_diagnostics": {
+          "duration_seconds": 37.93,
+          "sample_rate": 16000,
+          "rms_energy": 0.05348,
+          "peak_amplitude": 0.4744,
+          "clipping_ratio": 0.0,
+          "silence_ratio": 0.0029,
+          "snr_db": 11.06,
+          "zero_crossing_rate": 0.266413,
+          "num_samples": 606878,
+          "quality_flag": "acceptable"
+        },
+        "likely_failure_category": "Acoustic Ambiguity / Distribution Shift",
+        "recommended_next_action": "Request secondary out-of-band verification."
+      },
+      {
+        "file_identifier": "4.wav",
+        "true_label": "spoof",
+        "predicted_label": "bona_fide",
+        "raw_model_score": 0.28,
+        "calibrated_probability": 0.28,
+        "risk_band": "Review required",
+        "quality_diagnostics": {
+          "duration_seconds": 51.67,
+          "sample_rate": 16000,
+          "rms_energy": 0.052126,
+          "peak_amplitude": 0.47,
+          "clipping_ratio": 0.0,
+          "silence_ratio": 0.0029,
+          "snr_db": 10.82,
+          "zero_crossing_rate": 0.274348,
+          "num_samples": 826724,
+          "quality_flag": "acceptable"
+        },
+        "likely_failure_category": "Acoustic Ambiguity / Distribution Shift",
+        "recommended_next_action": "Request secondary out-of-band verification."
+      },
+      {
+        "file_identifier": "5.wav",
+        "true_label": "spoof",
+        "predicted_label": "bona_fide",
+        "raw_model_score": 0.28,
+        "calibrated_probability": 0.28,
+        "risk_band": "Review required",
+        "quality_diagnostics": {
+          "duration_seconds": 31.843,
+          "sample_rate": 16000,
+          "rms_energy": 0.050293,
+          "peak_amplitude": 0.4307,
+          "clipping_ratio": 0.0,
+          "silence_ratio": 0.003,
+          "snr_db": 10.57,
+          "zero_crossing_rate": 0.287421,
+          "num_samples": 509492,
+          "quality_flag": "acceptable"
+        },
+        "likely_failure_category": "Acoustic Ambiguity / Distribution Shift",
+        "recommended_next_action": "Request secondary out-of-band verification."
+      },
+      {
+        "file_identifier": "6.wav",
+        "true_label": "spoof",
+        "predicted_label": "bona_fide",
+        "raw_model_score": 0.28,
+        "calibrated_probability": 0.28,
+        "risk_band": "Review required",
+        "quality_diagnostics": {
+          "duration_seconds": 31.843,
+          "sample_rate": 16000,
+          "rms_energy": 0.050246,
+          "peak_amplitude": 0.4458,
+          "clipping_ratio": 0.0,
+          "silence_ratio": 0.003,
+          "snr_db": 10.54,
+          "zero_crossing_rate": 0.286658,
+          "num_samples": 509492,
+          "quality_flag": "acceptable"
+        },
+        "likely_failure_category": "Acoustic Ambiguity / Distribution Shift",
+        "recommended_next_action": "Request secondary out-of-band verification."
+      },
+      {
+        "file_identifier": "7.wav",
+        "true_label": "spoof",
+        "predicted_label": "bona_fide",
+        "raw_model_score": 0.28,
+        "calibrated_probability": 0.28,
+        "risk_band": "Review required",
+        "quality_diagnostics": {
+          "duration_seconds": 33.881,
+          "sample_rate": 16000,
+          "rms_energy": 0.060463,
+          "peak_amplitude": 0.593,
+          "clipping_ratio": 0.0,
+          "silence_ratio": 0.0026,
+          "snr_db": 12.08,
+          "zero_crossing_rate": 0.254556,
+          "num_samples": 542092,
+          "quality_flag": "acceptable"
+        },
+        "likely_failure_category": "Acoustic Ambiguity / Distribution Shift",
+        "recommended_next_action": "Request secondary out-of-band verification."
+      }
+    ]
+  },
+  {
+    "scenario": "Faint / Low Energy Audio (0.05x)",
+    "sample_count": 14,
+    "accuracy": 0.9286,
+    "precision": 0.875,
+    "recall": 1.0,
+    "f1": 0.9333,
+    "roc_auc": 1.0,
+    "fpr": 0.1429,
+    "fnr": 0.0,
+    "uncertainty_rate": 0.3571,
+    "confusion_matrix": {
+      "TN": 6,
+      "FP": 1,
+      "FN": 0,
+      "TP": 7
+    },
+    "error_diagnostics": [
+      {
+        "file_identifier": "02.wav",
+        "true_label": "bona_fide",
+        "predicted_label": "spoof",
+        "raw_model_score": 0.42,
+        "calibrated_probability": 0.42,
+        "risk_band": "Review required",
+        "quality_diagnostics": {
+          "duration_seconds": 12.313,
+          "sample_rate": 16000,
+          "rms_energy": 0.005438,
+          "peak_amplitude": 0.0524,
+          "clipping_ratio": 0.0,
+          "silence_ratio": 0.4328,
+          "snr_db": 60.0,
+          "zero_crossing_rate": 0.230207,
+          "num_samples": 197016,
+          "quality_flag": "acceptable"
+        },
+        "likely_failure_category": "Acoustic Ambiguity / Distribution Shift",
+        "recommended_next_action": "Request secondary out-of-band verification."
+      }
+    ]
+  },
+  {
+    "scenario": "Heavily Clipped Audio (4.0x)",
+    "sample_count": 14,
+    "accuracy": 1.0,
+    "precision": 1.0,
+    "recall": 1.0,
+    "f1": 1.0,
+    "roc_auc": 1.0,
+    "fpr": 0.0,
+    "fnr": 0.0,
+    "uncertainty_rate": 0.5714,
+    "confusion_matrix": {
+      "TN": 7,
+      "FP": 0,
+      "FN": 0,
+      "TP": 7
+    },
+    "error_diagnostics": []
+  },
+  {
+    "scenario": "Telephony Narrowband (8kHz Down/Up)",
+    "sample_count": 14,
+    "accuracy": 0.5,
+    "precision": 0.5,
+    "recall": 1.0,
+    "f1": 0.6667,
+    "roc_auc": 0.5816,
+    "fpr": 1.0,
+    "fnr": 0.0,
+    "uncertainty_rate": 0.4286,
+    "confusion_matrix": {
+      "TN": 0,
+      "FP": 7,
+      "FN": 0,
+      "TP": 7
+    },
+    "error_diagnostics": [
+      {
+        "file_identifier": "01.wav",
+        "true_label": "bona_fide",
+        "predicted_label": "spoof",
+        "raw_model_score": 0.8,
+        "calibrated_probability": 0.8,
+        "risk_band": "High risk",
+        "quality_diagnostics": {
+          "duration_seconds": 26.273,
+          "sample_rate": 16000,
+          "rms_energy": 0.111249,
+          "peak_amplitude": 0.822,
+          "clipping_ratio": 0.0,
+          "silence_ratio": 0.0096,
+          "snr_db": 24.39,
+          "zero_crossing_rate": 0.079865,
+          "num_samples": 420376,
+          "quality_flag": "acceptable"
+        },
+        "likely_failure_category": "Acoustic Ambiguity / Distribution Shift",
+        "recommended_next_action": "Request secondary out-of-band verification."
+      },
+      {
+        "file_identifier": "02.wav",
+        "true_label": "bona_fide",
+        "predicted_label": "spoof",
+        "raw_model_score": 0.64,
+        "calibrated_probability": 0.64,
+        "risk_band": "Review required",
+        "quality_diagnostics": {
+          "duration_seconds": 12.313,
+          "sample_rate": 16000,
+          "rms_energy": 0.107902,
+          "peak_amplitude": 1.2479,
+          "clipping_ratio": 0.0012,
+          "silence_ratio": 0.151,
+          "snr_db": 60.0,
+          "zero_crossing_rate": 0.147938,
+          "num_samples": 197016,
+          "quality_flag": "acceptable"
+        },
+        "likely_failure_category": "Acoustic Ambiguity / Distribution Shift",
+        "recommended_next_action": "Request secondary out-of-band verification."
+      },
+      {
+        "file_identifier": "03.wav",
+        "true_label": "bona_fide",
+        "predicted_label": "spoof",
+        "raw_model_score": 0.46,
+        "calibrated_probability": 0.46,
+        "risk_band": "Review required",
+        "quality_diagnostics": {
+          "duration_seconds": 15.254,
+          "sample_rate": 16000,
+          "rms_energy": 0.124321,
+          "peak_amplitude": 0.9642,
+          "clipping_ratio": 0.0,
+          "silence_ratio": 0.0107,
+          "snr_db": 23.21,
+          "zero_crossing_rate": 0.064468,
+          "num_samples": 244056,
+          "quality_flag": "acceptable"
+        },
+        "likely_failure_category": "Acoustic Ambiguity / Distribution Shift",
+        "recommended_next_action": "Request secondary out-of-band verification."
+      },
+      {
+        "file_identifier": "4.wav",
+        "true_label": "bona_fide",
+        "predicted_label": "spoof",
+        "raw_model_score": 0.58,
+        "calibrated_probability": 0.58,
+        "risk_band": "Review required",
+        "quality_diagnostics": {
+          "duration_seconds": 14.233,
+          "sample_rate": 16000,
+          "rms_energy": 0.12883,
+          "peak_amplitude": 1.0184,
+          "clipping_ratio": 0.0,
+          "silence_ratio": 0.0112,
+          "snr_db": 24.95,
+          "zero_crossing_rate": 0.068017,
+          "num_samples": 227736,
+          "quality_flag": "acceptable"
+        },
+        "likely_failure_category": "Acoustic Ambiguity / Distribution Shift",
+        "recommended_next_action": "Request secondary out-of-band verification."
+      },
+      {
+        "file_identifier": "5.wav",
+        "true_label": "bona_fide",
+        "predicted_label": "spoof",
+        "raw_model_score": 0.48,
+        "calibrated_probability": 0.48,
+        "risk_band": "Review required",
+        "quality_diagnostics": {
+          "duration_seconds": 16.154,
+          "sample_rate": 16000,
+          "rms_energy": 0.156358,
+          "peak_amplitude": 1.0196,
+          "clipping_ratio": 0.0001,
+          "silence_ratio": 0.0412,
+          "snr_db": 33.55,
+          "zero_crossing_rate": 0.069148,
+          "num_samples": 258456,
+          "quality_flag": "acceptable"
+        },
+        "likely_failure_category": "Acoustic Ambiguity / Distribution Shift",
+        "recommended_next_action": "Request secondary out-of-band verification."
+      },
+      {
+        "file_identifier": "6.wav",
+        "true_label": "bona_fide",
+        "predicted_label": "spoof",
+        "raw_model_score": 0.68,
+        "calibrated_probability": 0.68,
+        "risk_band": "High risk",
+        "quality_diagnostics": {
+          "duration_seconds": 18.373,
+          "sample_rate": 16000,
+          "rms_energy": 0.127636,
+          "peak_amplitude": 1.0267,
+          "clipping_ratio": 0.0001,
+          "silence_ratio": 0.015,
+          "snr_db": 21.28,
+          "zero_crossing_rate": 0.081012,
+          "num_samples": 293976,
+          "quality_flag": "acceptable"
+        },
+        "likely_failure_category": "Acoustic Ambiguity / Distribution Shift",
+        "recommended_next_action": "Request secondary out-of-band verification."
+      },
+      {
+        "file_identifier": "7.wav",
+        "true_label": "bona_fide",
+        "predicted_label": "spoof",
+        "raw_model_score": 0.62,
+        "calibrated_probability": 0.62,
+        "risk_band": "Review required",
+        "quality_diagnostics": {
+          "duration_seconds": 15.954,
+          "sample_rate": 16000,
+          "rms_energy": 0.152752,
+          "peak_amplitude": 1.0302,
+          "clipping_ratio": 0.0001,
+          "silence_ratio": 0.0145,
+          "snr_db": 28.31,
+          "zero_crossing_rate": 0.069817,
+          "num_samples": 255256,
+          "quality_flag": "acceptable"
+        },
+        "likely_failure_category": "Acoustic Ambiguity / Distribution Shift",
+        "recommended_next_action": "Request secondary out-of-band verification."
+      }
+    ]
+  }
+]

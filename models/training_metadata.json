@@ -1,0 +1,124 @@
+{
+  "timestamp_utc": "2026-08-22T10:14:41.405126+00:00",
+  "total_samples": 10,
+  "human_samples": 5,
+  "ai_samples": 5,
+  "feature_count": 58,
+  "feature_names": [
+    "mfcc_mean_1",
+    "mfcc_mean_2",
+    "mfcc_mean_3",
+    "mfcc_mean_4",
+    "mfcc_mean_5",
+    "mfcc_mean_6",
+    "mfcc_mean_7",
+    "mfcc_mean_8",
+    "mfcc_mean_9",
+    "mfcc_mean_10",
+    "mfcc_mean_11",
+    "mfcc_mean_12",
+    "mfcc_mean_13",
+    "mfcc_mean_14",
+    "mfcc_mean_15",
+    "mfcc_mean_16",
+    "mfcc_mean_17",
+    "mfcc_mean_18",
+    "mfcc_mean_19",
+    "mfcc_mean_20",
+    "mfcc_std_1",
+    "mfcc_std_2",
+    "mfcc_std_3",
+    "mfcc_std_4",
+    "mfcc_std_5",
+    "mfcc_std_6",
+    "mfcc_std_7",
+    "mfcc_std_8",
+    "mfcc_std_9",
+    "mfcc_std_10",
+    "mfcc_std_11",
+    "mfcc_std_12",
+    "mfcc_std_13",
+    "mfcc_std_14",
+    "mfcc_std_15",
+    "mfcc_std_16",
+    "mfcc_std_17",
+    "mfcc_std_18",
+    "mfcc_std_19",
+    "mfcc_std_20",
+    "spectral_centroid_mean",
+    "spectral_centroid_std",
+    "spectral_rolloff_mean",
+    "spectral_rolloff_std",
+    "spectral_bandwidth_mean",
+    "spectral_bandwidth_std",
+    "spectral_flatness_mean",
+    "lp_residual_kurtosis",
+    "bicoherence_coupling_score",
+    "rms_energy_mean",
+    "rms_energy_std",
+    "zcr_mean",
+    "zcr_std",
+    "f0_mean_hz",
+    "f0_std_hz",
+    "jitter_local",
+    "shimmer_local",
+    "breath_pause_ratio"
+  ],
+  "cv_accuracy_mean": 1.0,
+  "cv_accuracy_std": 0.0,
+  "training_accuracy": 1.0,
+  "training_f1": 1.0,
+  "training_roc_auc": 1.0,
+  "confusion_matrix": [
+    [
+      5,
+      0
+    ],
+    [
+      0,
+      5
+    ]
+  ],
+  "top_features": [
+    {
+      "feature": "spectral_rolloff_std",
+      "importance": 0.065
+    },
+    {
+      "feature": "mfcc_mean_7",
+      "importance": 0.065
+    },
+    {
+      "feature": "mfcc_mean_11",
+      "importance": 0.065
+    },
+    {
+      "feature": "mfcc_mean_3",
+      "importance": 0.0567
+    },
+    {
+      "feature": "spectral_bandwidth_mean",
+      "importance": 0.05
+    },
+    {
+      "feature": "zcr_std",
+      "importance": 0.05
+    },
+    {
+      "feature": "mfcc_mean_10",
+      "importance": 0.05
+    },
+    {
+      "feature": "spectral_bandwidth_std",
+      "importance": 0.045
+    },
+    {
+      "feature": "mfcc_mean_17",
+      "importance": 0.0417
+    },
+    {
+      "feature": "mfcc_mean_15",
+      "importance": 0.0367
+    }
+  ]
+}

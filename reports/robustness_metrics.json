@@ -1,0 +1,178 @@
+[
+  {
+    "condition": "clean",
+    "sample_count": 14,
+    "accuracy": 1.0,
+    "balanced_accuracy": 1.0,
+    "precision": 1.0,
+    "recall": 1.0,
+    "f1_score": 1.0,
+    "roc_auc": 1.0,
+    "false_positive_rate": 0.0,
+    "false_negative_rate": 0.0,
+    "uncertain_rate": 0.0,
+    "brier_score": 0.0856,
+    "confusion_matrix": {
+      "tn": 7,
+      "fp": 0,
+      "fn": 0,
+      "tp": 7
+    },
+    "median_latency_ms": 291.37,
+    "p95_latency_ms": 855.67
+  },
+  {
+    "condition": "gaussian_noise_20db",
+    "sample_count": 14,
+    "accuracy": 0.5,
+    "balanced_accuracy": 0.5,
+    "precision": 0.0,
+    "recall": 0.0,
+    "f1_score": 0.0,
+    "roc_auc": 0.5408,
+    "false_positive_rate": 0.0,
+    "false_negative_rate": 1.0,
+    "uncertain_rate": 0.0714,
+    "brier_score": 0.3703,
+    "confusion_matrix": {
+      "tn": 7,
+      "fp": 0,
+      "fn": 7,
+      "tp": 0
+    },
+    "median_latency_ms": 239.61,
+    "p95_latency_ms": 652.45
+  },
+  {
+    "condition": "gain_softer_6db",
+    "sample_count": 14,
+    "accuracy": 1.0,
+    "balanced_accuracy": 1.0,
+    "precision": 1.0,
+    "recall": 1.0,
+    "f1_score": 1.0,
+    "roc_auc": 1.0,
+    "false_positive_rate": 0.0,
+    "false_negative_rate": 0.0,
+    "uncertain_rate": 0.0,
+    "brier_score": 0.0856,
+    "confusion_matrix": {
+      "tn": 7,
+      "fp": 0,
+      "fn": 0,
+      "tp": 7
+    },
+    "median_latency_ms": 220.88,
+    "p95_latency_ms": 629.66
+  },
+  {
+    "condition": "gain_louder_3db",
+    "sample_count": 14,
+    "accuracy": 1.0,
+    "balanced_accuracy": 1.0,
+    "precision": 1.0,
+    "recall": 1.0,
+    "f1_score": 1.0,
+    "roc_auc": 1.0,
+    "false_positive_rate": 0.0,
+    "false_negative_rate": 0.0,
+    "uncertain_rate": 0.0,
+    "brier_score": 0.0864,
+    "confusion_matrix": {
+      "tn": 7,
+      "fp": 0,
+      "fn": 0,
+      "tp": 7
+    },
+    "median_latency_ms": 237.05,
+    "p95_latency_ms": 791.14
+  },
+  {
+    "condition": "peak_clipping",
+    "sample_count": 14,
+    "accuracy": 1.0,
+    "balanced_accuracy": 1.0,
+    "precision": 1.0,
+    "recall": 1.0,
+    "f1_score": 1.0,
+    "roc_auc": 1.0,
+    "false_positive_rate": 0.0,
+    "false_negative_rate": 0.0,
+    "uncertain_rate": 0.0714,
+    "brier_score": 0.091,
+    "confusion_matrix": {
+      "tn": 7,
+      "fp": 0,
+      "fn": 0,
+      "tp": 7
+    },
+    "median_latency_ms": 218.9,
+    "p95_latency_ms": 696.92
+  },
+  {
+    "condition": "telephony_8khz",
+    "sample_count": 14,
+    "accuracy": 0.7857,
+    "balanced_accuracy": 0.7857,
+    "precision": 0.7,
+    "recall": 1.0,
+    "f1_score": 0.8235,
+    "roc_auc": 0.8469,
+    "false_positive_rate": 0.4286,
+    "false_negative_rate": 0.0,
+    "uncertain_rate": 0.0714,
+    "brier_score": 0.1819,
+    "confusion_matrix": {
+      "tn": 4,
+      "fp": 3,
+      "fn": 0,
+      "tp": 7
+    },
+    "median_latency_ms": 197.21,
+    "p95_latency_ms": 626.52
+  },
+  {
+    "condition": "short_slice_1s",
+    "sample_count": 14,
+    "accuracy": 0.7857,
+    "balanced_accuracy": 0.7857,
+    "precision": 0.8333,
+    "recall": 0.7143,
+    "f1_score": 0.7692,
+    "roc_auc": 0.9592,
+    "false_positive_rate": 0.1429,
+    "false_negative_rate": 0.2857,
+    "uncertain_rate": 0.5714,
+    "brier_score": 0.1625,
+    "confusion_matrix": {
+      "tn": 6,
+      "fp": 1,
+      "fn": 2,
+      "tp": 5
+    },
+    "median_latency_ms": 16.31,
+    "p95_latency_ms": 17.52
+  },
+  {
+    "condition": "reverberation",
+    "sample_count": 14,
+    "accuracy": 0.5,
+    "balanced_accuracy": 0.5,
+    "precision": 0.0,
+    "recall": 0.0,
+    "f1_score": 0.0,
+    "roc_auc": 0.8469,
+    "false_positive_rate": 0.0,
+    "false_negative_rate": 1.0,
+    "uncertain_rate": 1.0,
+    "brier_score": 0.2234,
+    "confusion_matrix": {
+      "tn": 7,
+      "fp": 0,
+      "fn": 7,
+      "tp": 0
+    },
+    "median_latency_ms": 684.11,
+    "p95_latency_ms": 821.86
+  }
+]

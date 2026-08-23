@@ -1,0 +1,31 @@
+{
+  "timestamp_utc": "2026-08-23T00:56:55.081573+00:00",
+  "is_preliminary": false,
+  "validation_samples": 27,
+  "optimal_decision_threshold": 0.5,
+  "accuracy": 0.963,
+  "balanced_accuracy": 0.9444,
+  "precision": 0.9474,
+  "recall": 1.0,
+  "f1_score": 0.973,
+  "roc_auc": 0.9938,
+  "confusion_matrix": {
+    "true_negatives_bona_fide": 8,
+    "false_positives_spoof": 1,
+    "false_negatives_bona_fide": 0,
+    "true_positives_spoof": 18,
+    "matrix_2x2": [
+      [
+        8,
+        1
+      ],
+      [
+        0,
+        18
+      ]
+    ]
+  },
+  "false_positive_count": 1,
+  "false_negative_count": 0,
+  "disclaimer": "RESEARCH PROTOTYPE NOTICE: Scores and accuracy metrics are benchmark figures on a small hackathon research dataset and DO NOT constitute proof of production reliability. Real-world telephony noise, codec compression, and novel generative vocoders require human-in-the-loop review."
+}

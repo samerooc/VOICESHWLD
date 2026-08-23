@@ -1,0 +1,48 @@
+{
+  "benchmark_timestamp": "2026-08-22 20:14:46",
+  "trials_per_sample": 5,
+  "results": [
+    {
+      "scenario": "Bona Fide Human Voice (01.wav)",
+      "category": "bona_fide",
+      "duration_sec": 26.27,
+      "median_feature_extraction_ms": 57.76,
+      "median_inference_ms": 2.25,
+      "median_total_ms": 59.96,
+      "p95_total_ms": 710.71,
+      "ram_mb": 145.0
+    },
+    {
+      "scenario": "Bona Fide Human Voice (02.wav)",
+      "category": "bona_fide",
+      "duration_sec": 12.31,
+      "median_feature_extraction_ms": 12.13,
+      "median_inference_ms": 1.97,
+      "median_total_ms": 14.1,
+      "p95_total_ms": 17.66,
+      "ram_mb": 145.0
+    },
+    {
+      "scenario": "Synthetic AI Spoof Voice (1.wav)",
+      "category": "spoof",
+      "duration_sec": 37.85,
+      "median_feature_extraction_ms": 29.75,
+      "median_inference_ms": 2.24,
+      "median_total_ms": 32.18,
+      "p95_total_ms": 32.99,
+      "ram_mb": 145.0
+    },
+    {
+      "scenario": "Synthetic AI Spoof Voice (2.wav)",
+      "category": "spoof",
+      "duration_sec": 35.94,
+      "median_feature_extraction_ms": 28.16,
+      "median_inference_ms": 2.21,
+      "median_total_ms": 30.42,
+      "p95_total_ms": 30.63,
+      "ram_mb": 145.0
+    }
+  ],
+  "invalid_rejection_ms": 1.84,
+  "disclaimer": "Local prototype performance on CPU; not a production latency benchmark."
+}

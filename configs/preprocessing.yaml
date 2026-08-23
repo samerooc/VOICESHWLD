@@ -1,0 +1,49 @@
+# VoiceShield Audio Preprocessing Contract Configuration (Phase 4)
+version: "1.0.0"
+
+audio:
+  target_sample_rate: 16000
+  channels: 1 # Mono downmix
+  dtype: "float32"
+  resampling_method: "soxr_hq" # High quality polyphase / bandlimited sinc resampling
+
+limits:
+  min_duration_seconds: 0.50
+  max_duration_seconds: 300.00
+  max_file_size_bytes: 15728640 # 15 MB
+  min_rms_energy: 0.00001
+  clipping_threshold: 0.99
+  silence_threshold_db: 30.0
+
+windowing:
+  crop_pad_strategy: "sliding_window_or_pad"
+  window_duration_seconds: 2.5
+  hop_duration_seconds: 1.0
+  window_size_samples: 40000 # 2.5s * 16000
+  stride_samples: 16000 # 1.0s * 16000
+
+transformations:
+  dc_offset_removal: true
+  peak_normalization: true
+  amplitude_scaling: true
+  silence_trimming:
+    enabled: true
+    top_db: 30.0
+    min_speech_duration_seconds: 0.40
+
+supported_formats:
+  - "wav"
+  - "flac"
+  - "ogg"
+  - "opus"
+  - "mp3"
+  - "m4a"
+  - "aac"
+
+features:
+  n_mfcc: 20
+  include_mfcc_means: true
+  include_mfcc_stds: true
+  include_rms: true
+  include_zcr: true
+  total_features: 42

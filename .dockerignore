@@ -1,0 +1,46 @@
+# VoiceShield Docker Ignore Manifest (Phase 8)
+# Excludes private data, environment artifacts, caches, and raw audio files
+
+# Python bytecode and caches
+__pycache__/
+*.py[cod]
+*$py.class
+.pytest_cache/
+.coverage
+htmlcov/
+
+# Virtual Environments
+venv/
+.venv/
+env/
+ENV/
+
+# Git and OS metadata
+.git/
+.gitignore
+.dockerignore
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
+
+# Backups
+backups/
+
+# Audio Files and Datasets (Zero Audio in Container Image)
+*.wav
+*.mp3
+*.m4a
+*.flac
+*.ogg
+data/human/
+data/ai_voice/
+data/test/
+data/private/
+reports/private/
+
+# Secret files
+.env
+.env.*
+*.pem
+*.key

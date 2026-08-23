@@ -1,0 +1,57 @@
+{
+  "timestamp_utc": "2026-08-23T00:56:31.457919+00:00",
+  "manifest_path": "data/manifest.csv",
+  "audit_passed": true,
+  "total_files": 24,
+  "valid_files": 24,
+  "invalid_files": 0,
+  "missing_files": [],
+  "silent_files": [],
+  "too_short_files": [],
+  "invalid_labels": [],
+  "invalid_splits": [],
+  "warnings": [
+    "Found 1 duplicate SHA-256 hash group(s)."
+  ],
+  "class_distribution": {
+    "spoof": 12,
+    "bona_fide": 12
+  },
+  "split_distribution": {
+    "train": {
+      "spoof": 5,
+      "bona_fide": 5
+    },
+    "test": {
+      "spoof": 7,
+      "bona_fide": 7
+    }
+  },
+  "duration_statistics": {
+    "total_seconds": 480.66,
+    "total_minutes": 8.01,
+    "average_seconds": 20.03,
+    "min_seconds": 3.97,
+    "max_seconds": 51.67,
+    "std_dev_seconds": 12.59
+  },
+  "sample_rate_distribution": {
+    "8000 Hz": 12,
+    "48000 Hz": 12
+  },
+  "codec_distribution": {
+    "PCM_16": 24
+  },
+  "duplicate_hash_groups": {
+    "901677d465dc32b7f51a801aa31212870c8c99182cb31524bee32f861b0c4fb2": [
+      "data/test/ai_voice/5.wav",
+      "data/test/ai_voice/6.wav"
+    ]
+  },
+  "data_leakage_detected": false,
+  "leaked_hash_count": 0,
+  "speaker_overlap_detected": false,
+  "overlapping_speakers": [],
+  "statutory_disclaimer": "Experimental decision-support prototype; not identity proof.",
+  "research_notice": "RESEARCH PROTOTYPE NOTICE: Scores and accuracy metrics are benchmark figures on a small hackathon research dataset and DO NOT constitute proof of production reliability. Real-world telephony noise, codec compression, and novel generative vocoders require human-in-the-loop review."
+}

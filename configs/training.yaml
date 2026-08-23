@@ -1,0 +1,46 @@
+# VoiceShield Model Training Configuration (Phase 6 & Phase 8)
+version: "2.0.0"
+model_name: "VoiceShield Acoustic Spectral Classifier"
+active_backbone: "acoustic_spectral_net"
+
+pipeline:
+  scaler: "StandardScaler"
+  classifier: "RandomForestClassifier" # Or MLPClassifier
+
+classifier_params:
+  n_estimators: 200
+  max_depth: null
+  min_samples_split: 2
+  class_weight: "balanced"
+  random_state: 42
+  n_jobs: 1
+
+training:
+  random_seed: 42
+  cv_folds: 5
+  scoring_metric: "f1"
+  early_stopping: true
+  patience: 15
+  threshold_tuning_target: 0.500
+
+augmentations:
+  enabled: true
+  random_seed: 42
+  gain_variation: true
+  background_noise: true
+  reverberation: true
+  mild_clipping: true
+  resampling: true
+  narrowband_telephony: true
+  spectral_masking: true
+  sliding_windows:
+    window_duration_seconds: 2.5
+    hop_duration_seconds: 1.0
+
+paths:
+  manifest_path: "data/manifest.csv"
+  output_model_path: "models/voice_detector.pkl"
+  output_metadata_path: "models/model_metadata.json"
+  validation_metrics_path: "reports/validation_metrics.json"
+  training_log_path: "reports/training_log.json"
+  feature_importance_path: "reports/feature_importance.csv"

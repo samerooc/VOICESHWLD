@@ -1,0 +1,38 @@
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+
+# Environments
+.env
+.env.local
+venv/
+env/
+ENV/
+.venv/
+
+# Testing & Coverage
+.pytest_cache/
+.coverage
+htmlcov/
+
+# Backups
+backups/
+
+# Audio Files & Private Data (Zero Git Contamination)
+*.wav
+*.mp3
+*.m4a
+*.flac
+*.ogg
+data/private/
+
+# Model Weights (Persisted locally or in release artifacts)
+models/*.pkl
+
+# OS / Editor Files
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/

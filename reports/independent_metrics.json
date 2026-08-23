@@ -1,0 +1,140 @@
+{
+  "checkpoint": "models/voice_detector.pkl",
+  "sample_count": 14,
+  "total_test_samples": 14,
+  "group_metrics": {
+    "clean_audio (Held-Out In-Domain)": {
+      "group_name": "clean_audio (Held-Out In-Domain)",
+      "sample_count": 14,
+      "confusion_matrix": {
+        "tn": 7,
+        "fp": 0,
+        "fn": 0,
+        "tp": 7
+      },
+      "accuracy": 1.0,
+      "balanced_accuracy": 1.0,
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1_score": 1.0,
+      "roc_auc": 1.0,
+      "false_positive_rate": 0.0,
+      "false_negative_rate": 0.0,
+      "eer": 0.0,
+      "uncertainty_rate": 0.0,
+      "calibration_error_brier": 0.0856,
+      "median_latency_ms": 258.92,
+      "p95_latency_ms": 1145.72
+    },
+    "unseen_speakers": {
+      "group_name": "unseen_speakers",
+      "sample_count": 14,
+      "confusion_matrix": {
+        "tn": 7,
+        "fp": 0,
+        "fn": 0,
+        "tp": 7
+      },
+      "accuracy": 1.0,
+      "balanced_accuracy": 1.0,
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1_score": 1.0,
+      "roc_auc": 1.0,
+      "false_positive_rate": 0.0,
+      "false_negative_rate": 0.0,
+      "eer": 0.0,
+      "uncertainty_rate": 0.0,
+      "calibration_error_brier": 0.0856,
+      "median_latency_ms": 248.1,
+      "p95_latency_ms": 724.4
+    },
+    "unseen_sources": {
+      "group_name": "unseen_sources",
+      "sample_count": 14,
+      "confusion_matrix": {
+        "tn": 7,
+        "fp": 0,
+        "fn": 0,
+        "tp": 7
+      },
+      "accuracy": 1.0,
+      "balanced_accuracy": 1.0,
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1_score": 1.0,
+      "roc_auc": 1.0,
+      "false_positive_rate": 0.0,
+      "false_negative_rate": 0.0,
+      "eer": 0.0,
+      "uncertainty_rate": 0.0,
+      "calibration_error_brier": 0.0856,
+      "median_latency_ms": 241.78,
+      "p95_latency_ms": 657.72
+    },
+    "text_to_speech": {
+      "group_name": "text_to_speech",
+      "sample_count": 7,
+      "confusion_matrix": {
+        "tn": 0,
+        "fp": 0,
+        "fn": 0,
+        "tp": 7
+      },
+      "accuracy": 1.0,
+      "balanced_accuracy": "N/A (Single class)",
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1_score": 1.0,
+      "roc_auc": "N/A (Single class)",
+      "false_positive_rate": 0.0,
+      "false_negative_rate": 0.0,
+      "eer": "N/A (Single class)",
+      "uncertainty_rate": 0.0,
+      "calibration_error_brier": "N/A",
+      "median_latency_ms": 337.51,
+      "p95_latency_ms": 738.92
+    },
+    "voice_conversion": {
+      "group_name": "voice_conversion",
+      "sample_count": 0,
+      "status": "NO_LABELED_DATA_IN_PARTITION"
+    },
+    "replay": {
+      "group_name": "replay",
+      "sample_count": 0,
+      "status": "NO_LABELED_DATA_IN_PARTITION"
+    }
+  },
+  "overall_metrics": {
+    "accuracy": 1.0,
+    "balanced_accuracy": 1.0,
+    "precision": 1.0,
+    "recall": 1.0,
+    "macro_f1": 1.0,
+    "roc_auc": 1.0,
+    "eer": 0.0,
+    "brier_score": 0.0856,
+    "false_positive_rate": 0.0,
+    "false_negative_rate": 0.0,
+    "uncertainty_rate": 0.0,
+    "median_latency_ms": 258.92,
+    "p95_latency_ms": 1145.72
+  },
+  "accuracy": 1.0,
+  "balanced_accuracy": 1.0,
+  "precision": 1.0,
+  "recall": 1.0,
+  "f1_score": 1.0,
+  "roc_auc": 1.0,
+  "brier_score": 0.0856,
+  "false_positive_rate": 0.0,
+  "false_negative_rate": 0.0,
+  "confusion_matrix": {
+    "tn": 7,
+    "fp": 0,
+    "fn": 0,
+    "tp": 7
+  },
+  "production_reliability_disclaimer": "Experimental model. Generalization is not verified across unobserved voice cloning models."
+}
