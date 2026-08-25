@@ -1,0 +1,21 @@
+{
+  "pythonPath": "./venv/Scripts/python.exe",
+  "venvPath": ".",
+  "venv": "venv",
+  "pythonVersion": "3.14",
+  "typeCheckingMode": "basic",
+  "useLibraryCodeForTypes": true,
+  "reportMissingModuleSource": "warning",
+  "reportMissingImports": "warning",
+  "reportMissingTypeStubs": "none",
+  "reportUnknownMemberType": "none",
+  "reportUnknownVariableType": "none",
+  "reportUnknownArgumentType": "none",
+  "reportUnknownParameterType": "none",
+  "reportGeneralTypeIssues": "none",
+  "extraPaths": [
+    ".",
+    "src",
+    "venv/Lib/site-packages"
+  ]
+}

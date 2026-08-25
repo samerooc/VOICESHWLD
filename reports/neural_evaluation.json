@@ -1,0 +1,290 @@
+{
+  "checkpoint": "models/voiceshield_neural_best.pt",
+  "sample_count": 35,
+  "evaluation_time_sec": 0.641,
+  "overall_metrics": {
+    "accuracy": 1.0,
+    "balanced_accuracy": 1.0,
+    "precision": 1.0,
+    "recall": 1.0,
+    "macro_f1": 1.0,
+    "roc_auc": 1.0,
+    "eer": 0.0,
+    "optimal_threshold": 0.3861,
+    "confusion_matrix": {
+      "tn": 3,
+      "fp": 0,
+      "fn": 0,
+      "tp": 32
+    }
+  },
+  "per_generator_breakdown": {
+    "hifigan": {
+      "sample_count": 14,
+      "accuracy": 100.0,
+      "mean_spoof_prob": 0.6711
+    },
+    "human_real": {
+      "sample_count": 3,
+      "accuracy": 100.0,
+      "mean_spoof_prob": 0.272
+    },
+    "neural_vocoder": {
+      "sample_count": 3,
+      "accuracy": 100.0,
+      "mean_spoof_prob": 0.4206
+    },
+    "xtts": {
+      "sample_count": 15,
+      "accuracy": 100.0,
+      "mean_spoof_prob": 0.6862
+    }
+  },
+  "per_file_results": [
+    {
+      "file_path": "data/ai_voice/ai_hifigan_spk_ai_hifigan_003_00038.wav",
+      "speaker_id": "ai_hifigan_spk_ai",
+      "generator_type": "hifigan",
+      "ground_truth": 1,
+      "spoof_prob": 0.7810516357421875
+    },
+    {
+      "file_path": "data/ai_voice/ai_hifigan_spk_ai_hifigan_003_00108.wav",
+      "speaker_id": "ai_hifigan_spk_ai",
+      "generator_type": "hifigan",
+      "ground_truth": 1,
+      "spoof_prob": 0.6750275492668152
+    },
+    {
+      "file_path": "data/ai_voice/ai_hifigan_spk_ai_hifigan_003_00178.wav",
+      "speaker_id": "ai_hifigan_spk_ai",
+      "generator_type": "hifigan",
+      "ground_truth": 1,
+      "spoof_prob": 0.8124130368232727
+    },
+    {
+      "file_path": "data/ai_voice/ai_hifigan_spk_ai_hifigan_010_00010.wav",
+      "speaker_id": "ai_hifigan_spk_ai",
+      "generator_type": "hifigan",
+      "ground_truth": 1,
+      "spoof_prob": 0.7790760397911072
+    },
+    {
+      "file_path": "data/ai_voice/ai_hifigan_spk_ai_hifigan_010_00080.wav",
+      "speaker_id": "ai_hifigan_spk_ai",
+      "generator_type": "hifigan",
+      "ground_truth": 1,
+      "spoof_prob": 0.7127901911735535
+    },
+    {
+      "file_path": "data/ai_voice/ai_hifigan_spk_ai_hifigan_010_00150.wav",
+      "speaker_id": "ai_hifigan_spk_ai",
+      "generator_type": "hifigan",
+      "ground_truth": 1,
+      "spoof_prob": 0.5595319867134094
+    },
+    {
+      "file_path": "data/ai_voice/ai_hifigan_spk_ai_hifigan_017_00052.wav",
+      "speaker_id": "ai_hifigan_spk_ai",
+      "generator_type": "hifigan",
+      "ground_truth": 1,
+      "spoof_prob": 0.3861132264137268
+    },
+    {
+      "file_path": "data/ai_voice/ai_hifigan_spk_ai_hifigan_017_00122.wav",
+      "speaker_id": "ai_hifigan_spk_ai",
+      "generator_type": "hifigan",
+      "ground_truth": 1,
+      "spoof_prob": 0.5808295607566833
+    },
+    {
+      "file_path": "data/ai_voice/ai_hifigan_spk_ai_hifigan_017_00192.wav",
+      "speaker_id": "ai_hifigan_spk_ai",
+      "generator_type": "hifigan",
+      "ground_truth": 1,
+      "spoof_prob": 0.5833715200424194
+    },
+    {
+      "file_path": "data/ai_voice/ai_hifigan_spk_ai_hifigan_024_00024.wav",
+      "speaker_id": "ai_hifigan_spk_ai",
+      "generator_type": "hifigan",
+      "ground_truth": 1,
+      "spoof_prob": 0.6419984698295593
+    },
+    {
+      "file_path": "data/ai_voice/ai_hifigan_spk_ai_hifigan_024_00094.wav",
+      "speaker_id": "ai_hifigan_spk_ai",
+      "generator_type": "hifigan",
+      "ground_truth": 1,
+      "spoof_prob": 0.8130500316619873
+    },
+    {
+      "file_path": "data/ai_voice/ai_hifigan_spk_ai_hifigan_024_00164.wav",
+      "speaker_id": "ai_hifigan_spk_ai",
+      "generator_type": "hifigan",
+      "ground_truth": 1,
+      "spoof_prob": 0.7488393783569336
+    },
+    {
+      "file_path": "data/ai_voice/ai_hifigan_spk_ai_hifigan_031_00066.wav",
+      "speaker_id": "ai_hifigan_spk_ai",
+      "generator_type": "hifigan",
+      "ground_truth": 1,
+      "spoof_prob": 0.6925578713417053
+    },
+    {
+      "file_path": "data/ai_voice/ai_hifigan_spk_ai_hifigan_031_00136.wav",
+      "speaker_id": "ai_hifigan_spk_ai",
+      "generator_type": "hifigan",
+      "ground_truth": 1,
+      "spoof_prob": 0.6283125877380371
+    },
+    {
+      "file_path": "data/ai_voice/ai_xtts_spk_ai_xtts_002_00002.wav",
+      "speaker_id": "ai_xtts_spk_ai",
+      "generator_type": "xtts",
+      "ground_truth": 1,
+      "spoof_prob": 0.5468950867652893
+    },
+    {
+      "file_path": "data/ai_voice/ai_xtts_spk_ai_xtts_002_00072.wav",
+      "speaker_id": "ai_xtts_spk_ai",
+      "generator_type": "xtts",
+      "ground_truth": 1,
+      "spoof_prob": 0.6756114363670349
+    },
+    {
+      "file_path": "data/ai_voice/ai_xtts_spk_ai_xtts_002_00142.wav",
+      "speaker_id": "ai_xtts_spk_ai",
+      "generator_type": "xtts",
+      "ground_truth": 1,
+      "spoof_prob": 0.570340633392334
+    },
+    {
+      "file_path": "data/ai_voice/ai_xtts_spk_ai_xtts_009_00044.wav",
+      "speaker_id": "ai_xtts_spk_ai",
+      "generator_type": "xtts",
+      "ground_truth": 1,
+      "spoof_prob": 0.6423477530479431
+    },
+    {
+      "file_path": "data/ai_voice/ai_xtts_spk_ai_xtts_009_00114.wav",
+      "speaker_id": "ai_xtts_spk_ai",
+      "generator_type": "xtts",
+      "ground_truth": 1,
+      "spoof_prob": 0.7004216909408569
+    },
+    {
+      "file_path": "data/ai_voice/ai_xtts_spk_ai_xtts_009_00184.wav",
+      "speaker_id": "ai_xtts_spk_ai",
+      "generator_type": "xtts",
+      "ground_truth": 1,
+      "spoof_prob": 0.8407241702079773
+    },
+    {
+      "file_path": "data/ai_voice/ai_xtts_spk_ai_xtts_016_00016.wav",
+      "speaker_id": "ai_xtts_spk_ai",
+      "generator_type": "xtts",
+      "ground_truth": 1,
+      "spoof_prob": 0.6056042909622192
+    },
+    {
+      "file_path": "data/ai_voice/ai_xtts_spk_ai_xtts_016_00086.wav",
+      "speaker_id": "ai_xtts_spk_ai",
+      "generator_type": "xtts",
+      "ground_truth": 1,
+      "spoof_prob": 0.7660757303237915
+    },
+    {
+      "file_path": "data/ai_voice/ai_xtts_spk_ai_xtts_016_00156.wav",
+      "speaker_id": "ai_xtts_spk_ai",
+      "generator_type": "xtts",
+      "ground_truth": 1,
+      "spoof_prob": 0.6525335311889648
+    },
+    {
+      "file_path": "data/ai_voice/ai_xtts_spk_ai_xtts_023_00058.wav",
+      "speaker_id": "ai_xtts_spk_ai",
+      "generator_type": "xtts",
+      "ground_truth": 1,
+      "spoof_prob": 0.8573041558265686
+    },
+    {
+      "file_path": "data/ai_voice/ai_xtts_spk_ai_xtts_023_00128.wav",
+      "speaker_id": "ai_xtts_spk_ai",
+      "generator_type": "xtts",
+      "ground_truth": 1,
+      "spoof_prob": 0.796268105506897
+    },
+    {
+      "file_path": "data/ai_voice/ai_xtts_spk_ai_xtts_023_00198.wav",
+      "speaker_id": "ai_xtts_spk_ai",
+      "generator_type": "xtts",
+      "ground_truth": 1,
+      "spoof_prob": 0.6974351406097412
+    },
+    {
+      "file_path": "data/ai_voice/ai_xtts_spk_ai_xtts_030_00030.wav",
+      "speaker_id": "ai_xtts_spk_ai",
+      "generator_type": "xtts",
+      "ground_truth": 1,
+      "spoof_prob": 0.6241444945335388
+    },
+    {
+      "file_path": "data/ai_voice/ai_xtts_spk_ai_xtts_030_00100.wav",
+      "speaker_id": "ai_xtts_spk_ai",
+      "generator_type": "xtts",
+      "ground_truth": 1,
+      "spoof_prob": 0.5419631600379944
+    },
+    {
+      "file_path": "data/ai_voice/ai_xtts_spk_ai_xtts_030_00170.wav",
+      "speaker_id": "ai_xtts_spk_ai",
+      "generator_type": "xtts",
+      "ground_truth": 1,
+      "spoof_prob": 0.7750399112701416
+    },
+    {
+      "file_path": "data/ai_voice/3.wav",
+      "speaker_id": "spk_ai_eccbc8",
+      "generator_type": "neural_vocoder",
+      "ground_truth": 1,
+      "spoof_prob": 0.4390625059604645
+    },
+    {
+      "file_path": "data/ai_voice/4.wav",
+      "speaker_id": "spk_ai_a87ff6",
+      "generator_type": "neural_vocoder",
+      "ground_truth": 1,
+      "spoof_prob": 0.4252031147480011
+    },
+    {
+      "file_path": "data/ai_voice/6.wav",
+      "speaker_id": "spk_ai_167909",
+      "generator_type": "neural_vocoder",
+      "ground_truth": 1,
+      "spoof_prob": 0.39749982953071594
+    },
+    {
+      "file_path": "data/human/02.wav",
+      "speaker_id": "spk_human_a2ef40",
+      "generator_type": "human_real",
+      "ground_truth": 0,
+      "spoof_prob": 0.2232597917318344
+    },
+    {
+      "file_path": "data/human/4.wav",
+      "speaker_id": "spk_human_a87ff6",
+      "generator_type": "human_real",
+      "ground_truth": 0,
+      "spoof_prob": 0.3856797218322754
+    },
+    {
+      "file_path": "data/human/5.wav",
+      "speaker_id": "spk_human_e4da3b",
+      "generator_type": "human_real",
+      "ground_truth": 0,
+      "spoof_prob": 0.2069997787475586
+    }
+  ]
+}

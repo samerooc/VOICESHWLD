@@ -1,62 +1,78 @@
+version: '3.8'
+
 services:
-  api:
-    build:
-      context: .
-      dockerfile: Dockerfile
-    container_name: voiceshield_api
-    ports:
-      - "8000:8000"
-    environment:
-      - PYTHONUNBUFFERED=1
-    command: ["uvicorn", "api:app", "--host", "0.0.0.0", "--port", "8000"]
+  voiceshield-redis:
+    image: redis:7-alpine
+    container_name: voiceshield-redis
     restart: unless-stopped
+    command: ["redis-server", "--appendonly", "yes", "--maxmemory", "512mb", "--maxmemory-policy", "allkeys-lru"]
+    ports:
+      - "6379:6379"
+    volumes:
+      - redis_data:/data
     healthcheck:
-      test: ["CMD-SHELL", "curl -f http://localhost:8000/health || exit 1"]
-      interval: 15s
+      test: ["CMD", "redis-cli", "ping"]
+      interval: 10s
       timeout: 5s
       retries: 3
-      start_period: 10s
 
-  dashboard:
+  voiceshield-api:
     build:
       context: .
       dockerfile: Dockerfile
-    container_name: voiceshield_dashboard
-    ports:
-      - "8502:8502"
+    container_name: voiceshield-api
+    restart: unless-stopped
+    command: ["uvicorn", "api:app", "--host", "0.0.0.0", "--port", "8000", "--workers", "2"]
     environment:
-      - PYTHONUNBUFFERED=1
-    command: ["streamlit", "run", "app.py", "--server.address=0.0.0.0", "--server.port=8502", "--server.headless=true"]
+      - REDIS_URL=redis://voiceshield-redis:6379/0
+      - CUDA_VISIBLE_DEVICES=""
+      - PORT=8000
     depends_on:
-      api:
+      voiceshield-redis:
         condition: service_healthy
-    restart: unless-stopped
-    healthcheck:
-      test: ["CMD-SHELL", "curl -f http://localhost:8502/_stcore/health || exit 1"]
-      interval: 30s
-      timeout: 10s
-      retries: 3
-      start_period: 15s
+    ports:
+      - "8000:8000"
 
-  # Optional GPU Acceleration Service (Disabled by default; activated via `docker compose --profile gpu up`)
-  api-gpu:
-    profiles:
-      - gpu
+  voiceshield-worker:
     build:
       context: .
       dockerfile: Dockerfile
-    container_name: voiceshield_api_gpu
-    ports:
-      - "8001:8000"
-    environment:
-      - PYTHONUNBUFFERED=1
-      - NVIDIA_VISIBLE_DEVICES=all
-    command: ["uvicorn", "api:app", "--host", "0.0.0.0", "--port", "8000"]
-    deploy:
-      resources:
-        reservations:
-          devices:
-            - driver: nvidia
-              count: 1
-              capabilities: [gpu]
+    container_name: voiceshield-worker
     restart: unless-stopped
+    command: ["python", "src/worker.py"]
+    environment:
+      - REDIS_HOST=voiceshield-redis
+      - REDIS_PORT=6379
+      - CUDA_VISIBLE_DEVICES=""
+    depends_on:
+      voiceshield-redis:
+        condition: service_healthy
+
+  voiceshield-dashboard:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: voiceshield-dashboard
+    restart: unless-stopped
+    command: ["streamlit", "run", "app.py", "--server.port", "8501", "--server.address", "0.0.0.0", "--server.headless", "true"]
+    environment:
+      - API_URL=http://voiceshield-api:8000
+    depends_on:
+      - voiceshield-api
+    ports:
+      - "8501:8501"
+
+  voiceshield-proxy:
+    image: nginx:alpine
+    container_name: voiceshield-proxy
+    restart: unless-stopped
+    ports:
+      - "80:80"
+    volumes:
+      - ./nginx/nginx.conf:/etc/nginx/nginx.conf:ro
+    depends_on:
+      - voiceshield-api
+      - voiceshield-dashboard
+
+volumes:
+  redis_data:

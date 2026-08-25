@@ -1,0 +1,4 @@
+[tool.pyrefly]
+python_interpreter = "./venv/Scripts/python.exe"
+search_path = [".", "src", "venv/Lib/site-packages"]
+ignore_missing_imports = ["parselmouth", "parselmouth.praat", "pydub", "soundfile", "librosa", "torch", "transformers", "torchaudio"]

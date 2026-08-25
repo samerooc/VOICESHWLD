@@ -26,10 +26,22 @@ backups/
 *.m4a
 *.flac
 *.ogg
+*.opus
+*.mpeg
+*.aac
 data/private/
+data/ai/
+data/human/
 
-# Model Weights (Persisted locally or in release artifacts)
+# Executables & Binaries
+*.exe
+*.dll
+cloudflared.exe
+ngrok.exe
+
+# Model Weights & Large Checkpoints
 models/*.pkl
+models/*.pt
 
 # OS / Editor Files
 .DS_Store

@@ -1,9 +1,9 @@
 {
-  "timestamp_utc": "2026-08-23T00:56:31.457919+00:00",
+  "timestamp_utc": "2026-08-25T02:00:07.711996+00:00",
   "manifest_path": "data/manifest.csv",
   "audit_passed": true,
-  "total_files": 24,
-  "valid_files": 24,
+  "total_files": 214,
+  "valid_files": 214,
   "invalid_files": 0,
   "missing_files": [],
   "silent_files": [],
@@ -14,38 +14,41 @@
     "Found 1 duplicate SHA-256 hash group(s)."
   ],
   "class_distribution": {
-    "spoof": 12,
-    "bona_fide": 12
+    "bona_fide": 107,
+    "spoof": 107
   },
   "split_distribution": {
     "train": {
-      "spoof": 5,
-      "bona_fide": 5
+      "spoof": 75,
+      "bona_fide": 104
     },
     "test": {
-      "spoof": 7,
-      "bona_fide": 7
+      "spoof": 30,
+      "bona_fide": 2
+    },
+    "validation": {
+      "spoof": 2,
+      "bona_fide": 1
     }
   },
   "duration_statistics": {
-    "total_seconds": 480.66,
-    "total_minutes": 8.01,
-    "average_seconds": 20.03,
-    "min_seconds": 3.97,
+    "total_seconds": 1080.53,
+    "total_minutes": 18.01,
+    "average_seconds": 5.05,
+    "min_seconds": 2.5,
     "max_seconds": 51.67,
-    "std_dev_seconds": 12.59
+    "std_dev_seconds": 6.56
   },
   "sample_rate_distribution": {
-    "8000 Hz": 12,
-    "48000 Hz": 12
+    "16000 Hz": 214
   },
   "codec_distribution": {
-    "PCM_16": 24
+    "PCM_16": 214
   },
   "duplicate_hash_groups": {
-    "901677d465dc32b7f51a801aa31212870c8c99182cb31524bee32f861b0c4fb2": [
-      "data/test/ai_voice/5.wav",
-      "data/test/ai_voice/6.wav"
+    "6f978a5bdb1e87b427f40bfc0d48eb539a19837304bcb0ad318e4008352baa3d": [
+      "data/ai_voice/5.wav",
+      "data/ai_voice/6.wav"
     ]
   },
   "data_leakage_detected": false,

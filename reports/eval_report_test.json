@@ -1,0 +1,35 @@
+{
+  "split": "test",
+  "total_samples": 129,
+  "threshold": 0.2,
+  "accuracy": 0.9922480620155039,
+  "balanced_accuracy": 0.995,
+  "precision": 0.9666666666666667,
+  "recall": 1.0,
+  "f1_score": 0.9830508474576272,
+  "roc_auc": 1.0,
+  "equal_error_rate": 0.0,
+  "confusion_matrix": {
+    "tn": 99,
+    "fp": 1,
+    "fn": 0,
+    "tp": 29
+  },
+  "generator_breakdown": {
+    "human_real": {
+      "sample_count": 100,
+      "accuracy": 0.99,
+      "mean_spoof_prob": 0.03016241705575463
+    },
+    "xtts": {
+      "sample_count": 15,
+      "accuracy": 1.0,
+      "mean_spoof_prob": 0.9641327090850031
+    },
+    "melgan": {
+      "sample_count": 14,
+      "accuracy": 1.0,
+      "mean_spoof_prob": 0.9641123189374409
+    }
+  }
+}

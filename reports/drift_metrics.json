@@ -1,0 +1,628 @@
+{
+  "timestamp_utc": "2026-08-25T02:00:16.534956+00:00",
+  "sample_count": 20,
+  "num_features_evaluated": 77,
+  "overall_drift_status": "DRIFT_DETECTED",
+  "max_psi": 8.2811,
+  "drifted_features_count": 77,
+  "psi_warning_threshold": 0.1,
+  "psi_alert_threshold": 0.25,
+  "feature_details": [
+    {
+      "feature_index": 0,
+      "feature_name": "feat_0",
+      "psi_score": 6.8622,
+      "ks_statistic": 0.765,
+      "ks_pvalue": 0.0,
+      "status": "DRIFT_DETECTED"
+    },
+    {
+      "feature_index": 1,
+      "feature_name": "feat_1",
+      "psi_score": 6.9067,
+      "ks_statistic": 0.86,
+      "ks_pvalue": 0.0,
+      "status": "DRIFT_DETECTED"
+    },
+    {
+      "feature_index": 2,
+      "feature_name": "feat_2",
+      "psi_score": 8.2811,
+      "ks_statistic": 0.955,
+      "ks_pvalue": 0.0,
+      "status": "DRIFT_DETECTED"
+    },
+    {
+      "feature_index": 3,
+      "feature_name": "feat_3",
+      "psi_score": 4.2305,
+      "ks_statistic": 0.625,
+      "ks_pvalue": 0.0,
+      "status": "DRIFT_DETECTED"
+    },
+    {
+      "feature_index": 4,
+      "feature_name": "feat_4",
+      "psi_score": 8.2811,
+      "ks_statistic": 0.905,
+      "ks_pvalue": 0.0,
+      "status": "DRIFT_DETECTED"
+    },
+    {
+      "feature_index": 5,
+      "feature_name": "feat_5",
+      "psi_score": 6.6558,
+      "ks_statistic": 0.8,
+      "ks_pvalue": 0.0,
+      "status": "DRIFT_DETECTED"
+    },
+    {
+      "feature_index": 6,
+      "feature_name": "feat_6",
+      "psi_score": 5.4453,
+      "ks_statistic": 0.755,
+      "ks_pvalue": 0.0,
+      "status": "DRIFT_DETECTED"
+    },
+    {
+      "feature_index": 7,
+      "feature_name": "feat_7",
+      "psi_score": 5.2075,
+      "ks_statistic": 0.6,
+      "ks_pvalue": 0.0,
+      "status": "DRIFT_DETECTED"
+    },
+    {
+      "feature_index": 8,
+      "feature_name": "feat_8",
+      "psi_score": 5.6638,
+      "ks_statistic": 0.71,
+      "ks_pvalue": 0.0,
+      "status": "DRIFT_DETECTED"
+    },
+    {
+      "feature_index": 9,
+      "feature_name": "feat_9",
+      "psi_score": 4.0649,
+      "ks_statistic": 0.615,
+      "ks_pvalue": 0.0,
+      "status": "DRIFT_DETECTED"
+    },
+    {
+      "feature_index": 10,
+      "feature_name": "feat_10",
+      "psi_score": 1.8648,
+      "ks_statistic": 0.34,
+      "ks_pvalue": 0.02355,
+      "status": "DRIFT_DETECTED"
+    },
+    {
+      "feature_index": 11,
+      "feature_name": "feat_11",
+      "psi_score": 1.1719,
+      "ks_statistic": 0.415,
+      "ks_pvalue": 0.00258,
+      "status": "DRIFT_DETECTED"
+    },
+    {
+      "feature_index": 12,
+      "feature_name": "feat_12",
+      "psi_score": 1.117,
+      "ks_statistic": 0.275,
+      "ks_pvalue": 0.10897,
+      "status": "DRIFT_DETECTED"
+    },
+    {
+      "feature_index": 13,
+      "feature_name": "feat_13",
+      "psi_score": 2.0645,
+      "ks_statistic": 0.45,
+      "ks_pvalue": 0.00078,
+      "status": "DRIFT_DETECTED"
+    },
+    {
+      "feature_index": 14,
+      "feature_name": "feat_14",
+      "psi_score": 1.7119,
+      "ks_statistic": 0.29,
+      "ks_pvalue": 0.07887,
+      "status": "DRIFT_DETECTED"
+    },
+    {
+      "feature_index": 15,
+      "feature_name": "feat_15",
+      "psi_score": 1.7929,
+      "ks_statistic": 0.27,
+      "ks_pvalue": 0.12088,
+      "status": "DRIFT_DETECTED"
+    },
+    {
+      "feature_index": 16,
+      "feature_name": "feat_16",
+      "psi_score": 2.6444,
+      "ks_statistic": 0.3,
+      "ks_pvalue": 0.06295,
+      "status": "DRIFT_DETECTED"
+    },
+    {
+      "feature_index": 17,
+      "feature_name": "feat_17",
+      "psi_score": 2.1481,
+      "ks_statistic": 0.395,
+      "ks_pvalue": 0.00489,
+      "status": "DRIFT_DETECTED"
+    },
+    {
+      "feature_index": 18,
+      "feature_name": "feat_18",
+      "psi_score": 5.289,
+      "ks_statistic": 0.46,
+      "ks_pvalue": 0.00054,
+      "status": "DRIFT_DETECTED"
+    },
+    {
+      "feature_index": 19,
+      "feature_name": "feat_19",
+      "psi_score": 4.4955,
+      "ks_statistic": 0.38,
+      "ks_pvalue": 0.0077,
+      "status": "DRIFT_DETECTED"
+    },
+    {
+      "feature_index": 20,
+      "feature_name": "feat_20",
+      "psi_score": 6.8071,
+      "ks_statistic": 0.5,
+      "ks_pvalue": 0.00011,
+      "status": "DRIFT_DETECTED"
+    },
+    {
+      "feature_index": 21,
+      "feature_name": "feat_21",
+      "psi_score": 6.0343,
+      "ks_statistic": 0.5,
+      "ks_pvalue": 0.00011,
+      "status": "DRIFT_DETECTED"
+    },
+    {
+      "feature_index": 22,
+      "feature_name": "feat_22",
+      "psi_score": 6.8131,
+      "ks_statistic": 0.55,
+      "ks_pvalue": 1e-05,
+      "status": "DRIFT_DETECTED"
+    },
+    {
+      "feature_index": 23,
+      "feature_name": "feat_23",
+      "psi_score": 6.8071,
+      "ks_statistic": 0.5,
+      "ks_pvalue": 0.00011,
+      "status": "DRIFT_DETECTED"
+    },
+    {
+      "feature_index": 24,
+      "feature_name": "feat_24",
+      "psi_score": 6.8313,
+      "ks_statistic": 0.6,
+      "ks_pvalue": 0.0,
+      "status": "DRIFT_DETECTED"
+    },
+    {
+      "feature_index": 25,
+      "feature_name": "feat_25",
+      "psi_score": 6.8131,
+      "ks_statistic": 0.55,
+      "ks_pvalue": 1e-05,
+      "status": "DRIFT_DETECTED"
+    },
+    {
+      "feature_index": 26,
+      "feature_name": "feat_26",
+      "psi_score": 6.8313,
+      "ks_statistic": 0.58,
+      "ks_pvalue": 0.0,
+      "status": "DRIFT_DETECTED"
+    },
+    {
+      "feature_index": 27,
+      "feature_name": "feat_27",
+      "psi_score": 6.8313,
+      "ks_statistic": 0.6,
+      "ks_pvalue": 0.0,
+      "status": "DRIFT_DETECTED"
+    },
+    {
+      "feature_index": 28,
+      "feature_name": "feat_28",
+      "psi_score": 6.8131,
+      "ks_statistic": 0.55,
+      "ks_pvalue": 1e-05,
+      "status": "DRIFT_DETECTED"
+    },
+    {
+      "feature_index": 29,
+      "feature_name": "feat_29",
+      "psi_score": 6.8313,
+      "ks_statistic": 0.6,
+      "ks_pvalue": 0.0,
+      "status": "DRIFT_DETECTED"
+    },
+    {
+      "feature_index": 30,
+      "feature_name": "feat_30",
+      "psi_score": 6.8313,
+      "ks_statistic": 0.6,
+      "ks_pvalue": 0.0,
+      "status": "DRIFT_DETECTED"
+    },
+    {
+      "feature_index": 31,
+      "feature_name": "feat_31",
+      "psi_score": 6.8131,
+      "ks_statistic": 0.55,
+      "ks_pvalue": 1e-05,
+      "status": "DRIFT_DETECTED"
+    },
+    {
+      "feature_index": 32,
+      "feature_name": "feat_32",
+      "psi_score": 7.0442,
+      "ks_statistic": 0.8,
+      "ks_pvalue": 0.0,
+      "status": "DRIFT_DETECTED"
+    },
+    {
+      "feature_index": 33,
+      "feature_name": "feat_33",
+      "psi_score": 6.0471,
+      "ks_statistic": 0.55,
+      "ks_pvalue": 1e-05,
+      "status": "DRIFT_DETECTED"
+    },
+    {
+      "feature_index": 34,
+      "feature_name": "feat_34",
+      "psi_score": 6.9665,
+      "ks_statistic": 0.75,
+      "ks_pvalue": 0.0,
+      "status": "DRIFT_DETECTED"
+    },
+    {
+      "feature_index": 35,
+      "feature_name": "feat_35",
+      "psi_score": 6.8071,
+      "ks_statistic": 0.5,
+      "ks_pvalue": 0.00011,
+      "status": "DRIFT_DETECTED"
+    },
+    {
+      "feature_index": 36,
+      "feature_name": "feat_36",
+      "psi_score": 6.8071,
+      "ks_statistic": 0.5,
+      "ks_pvalue": 0.00011,
+      "status": "DRIFT_DETECTED"
+    },
+    {
+      "feature_index": 37,
+      "feature_name": "feat_37",
+      "psi_score": 6.8071,
+      "ks_statistic": 0.5,
+      "ks_pvalue": 0.00011,
+      "status": "DRIFT_DETECTED"
+    },
+    {
+      "feature_index": 38,
+      "feature_name": "feat_38",
+      "psi_score": 6.8131,
+      "ks_statistic": 0.525,
+      "ks_pvalue": 4e-05,
+      "status": "DRIFT_DETECTED"
+    },
+    {
+      "feature_index": 39,
+      "feature_name": "feat_39",
+      "psi_score": 6.0471,
+      "ks_statistic": 0.55,
+      "ks_pvalue": 1e-05,
+      "status": "DRIFT_DETECTED"
+    },
+    {
+      "feature_index": 40,
+      "feature_name": "feat_40",
+      "psi_score": 6.0471,
+      "ks_statistic": 0.55,
+      "ks_pvalue": 1e-05,
+      "status": "DRIFT_DETECTED"
+    },
+    {
+      "feature_index": 41,
+      "feature_name": "feat_41",
+      "psi_score": 6.8313,
+      "ks_statistic": 0.6,
+      "ks_pvalue": 0.0,
+      "status": "DRIFT_DETECTED"
+    },
+    {
+      "feature_index": 42,
+      "feature_name": "feat_42",
+      "psi_score": 6.8131,
+      "ks_statistic": 0.55,
+      "ks_pvalue": 1e-05,
+      "status": "DRIFT_DETECTED"
+    },
+    {
+      "feature_index": 43,
+      "feature_name": "feat_43",
+      "psi_score": 6.8131,
+      "ks_statistic": 0.55,
+      "ks_pvalue": 1e-05,
+      "status": "DRIFT_DETECTED"
+    },
+    {
+      "feature_index": 44,
+      "feature_name": "feat_44",
+      "psi_score": 6.8313,
+      "ks_statistic": 0.6,
+      "ks_pvalue": 0.0,
+      "status": "DRIFT_DETECTED"
+    },
+    {
+      "feature_index": 45,
+      "feature_name": "feat_45",
+      "psi_score": 6.8313,
+      "ks_statistic": 0.6,
+      "ks_pvalue": 0.0,
+      "status": "DRIFT_DETECTED"
+    },
+    {
+      "feature_index": 46,
+      "feature_name": "feat_46",
+      "psi_score": 6.8313,
+      "ks_statistic": 0.6,
+      "ks_pvalue": 0.0,
+      "status": "DRIFT_DETECTED"
+    },
+    {
+      "feature_index": 47,
+      "feature_name": "feat_47",
+      "psi_score": 6.8071,
+      "ks_statistic": 0.5,
+      "ks_pvalue": 0.00011,
+      "status": "DRIFT_DETECTED"
+    },
+    {
+      "feature_index": 48,
+      "feature_name": "feat_48",
+      "psi_score": 6.8131,
+      "ks_statistic": 0.55,
+      "ks_pvalue": 1e-05,
+      "status": "DRIFT_DETECTED"
+    },
+    {
+      "feature_index": 49,
+      "feature_name": "feat_49",
+      "psi_score": 6.8071,
+      "ks_statistic": 0.5,
+      "ks_pvalue": 0.00011,
+      "status": "DRIFT_DETECTED"
+    },
+    {
+      "feature_index": 50,
+      "feature_name": "feat_50",
+      "psi_score": 6.8071,
+      "ks_statistic": 0.5,
+      "ks_pvalue": 0.00011,
+      "status": "DRIFT_DETECTED"
+    },
+    {
+      "feature_index": 51,
+      "feature_name": "feat_51",
+      "psi_score": 6.8071,
+      "ks_statistic": 0.5,
+      "ks_pvalue": 0.00011,
+      "status": "DRIFT_DETECTED"
+    },
+    {
+      "feature_index": 52,
+      "feature_name": "feat_52",
+      "psi_score": 6.8071,
+      "ks_statistic": 0.5,
+      "ks_pvalue": 0.00011,
+      "status": "DRIFT_DETECTED"
+    },
+    {
+      "feature_index": 53,
+      "feature_name": "feat_53",
+      "psi_score": 6.8622,
+      "ks_statistic": 0.65,
+      "ks_pvalue": 0.0,
+      "status": "DRIFT_DETECTED"
+    },
+    {
+      "feature_index": 54,
+      "feature_name": "feat_54",
+      "psi_score": 6.8622,
+      "ks_statistic": 0.65,
+      "ks_pvalue": 0.0,
+      "status": "DRIFT_DETECTED"
+    },
+    {
+      "feature_index": 55,
+      "feature_name": "feat_55",
+      "psi_score": 6.8131,
+      "ks_statistic": 0.55,
+      "ks_pvalue": 1e-05,
+      "status": "DRIFT_DETECTED"
+    },
+    {
+      "feature_index": 56,
+      "feature_name": "feat_56",
+      "psi_score": 6.8622,
+      "ks_statistic": 0.65,
+      "ks_pvalue": 0.0,
+      "status": "DRIFT_DETECTED"
+    },
+    {
+      "feature_index": 57,
+      "feature_name": "feat_57",
+      "psi_score": 6.8131,
+      "ks_statistic": 0.55,
+      "ks_pvalue": 1e-05,
+      "status": "DRIFT_DETECTED"
+    },
+    {
+      "feature_index": 58,
+      "feature_name": "feat_58",
+      "psi_score": 6.9067,
+      "ks_statistic": 0.7,
+      "ks_pvalue": 0.0,
+      "status": "DRIFT_DETECTED"
+    },
+    {
+      "feature_index": 59,
+      "feature_name": "feat_59",
+      "psi_score": 6.8131,
+      "ks_statistic": 0.55,
+      "ks_pvalue": 1e-05,
+      "status": "DRIFT_DETECTED"
+    },
+    {
+      "feature_index": 60,
+      "feature_name": "feat_60",
+      "psi_score": 8.2811,
+      "ks_statistic": 0.92,
+      "ks_pvalue": 0.0,
+      "status": "DRIFT_DETECTED"
+    },
+    {
+      "feature_index": 61,
+      "feature_name": "feat_61",
+      "psi_score": 5.1312,
+      "ks_statistic": 0.705,
+      "ks_pvalue": 0.0,
+      "status": "DRIFT_DETECTED"
+    },
+    {
+      "feature_index": 62,
+      "feature_name": "feat_62",
+      "psi_score": 5.8476,
+      "ks_statistic": 0.845,
+      "ks_pvalue": 0.0,
+      "status": "DRIFT_DETECTED"
+    },
+    {
+      "feature_index": 63,
+      "feature_name": "feat_63",
+      "psi_score": 6.2429,
+      "ks_statistic": 0.765,
+      "ks_pvalue": 0.0,
+      "status": "DRIFT_DETECTED"
+    },
+    {
+      "feature_index": 64,
+      "feature_name": "feat_64",
+      "psi_score": 6.6558,
+      "ks_statistic": 0.845,
+      "ks_pvalue": 0.0,
+      "status": "DRIFT_DETECTED"
+    },
+    {
+      "feature_index": 65,
+      "feature_name": "feat_65",
+      "psi_score": 4.2414,
+      "ks_statistic": 0.705,
+      "ks_pvalue": 0.0,
+      "status": "DRIFT_DETECTED"
+    },
+    {
+      "feature_index": 66,
+      "feature_name": "feat_66",
+      "psi_score": 6.6558,
+      "ks_statistic": 0.82,
+      "ks_pvalue": 0.0,
+      "status": "DRIFT_DETECTED"
+    },
+    {
+      "feature_index": 67,
+      "feature_name": "feat_67",
+      "psi_score": 4.8625,
+      "ks_statistic": 0.71,
+      "ks_pvalue": 0.0,
+      "status": "DRIFT_DETECTED"
+    },
+    {
+      "feature_index": 68,
+      "feature_name": "feat_68",
+      "psi_score": 5.3618,
+      "ks_statistic": 0.685,
+      "ks_pvalue": 0.0,
+      "status": "DRIFT_DETECTED"
+    },
+    {
+      "feature_index": 69,
+      "feature_name": "feat_69",
+      "psi_score": 4.0649,
+      "ks_statistic": 0.635,
+      "ks_pvalue": 0.0,
+      "status": "DRIFT_DETECTED"
+    },
+    {
+      "feature_index": 70,
+      "feature_name": "feat_70",
+      "psi_score": 6.4687,
+      "ks_statistic": 0.795,
+      "ks_pvalue": 0.0,
+      "status": "DRIFT_DETECTED"
+    },
+    {
+      "feature_index": 71,
+      "feature_name": "feat_71",
+      "psi_score": 4.6518,
+      "ks_statistic": 0.59,
+      "ks_pvalue": 0.0,
+      "status": "DRIFT_DETECTED"
+    },
+    {
+      "feature_index": 72,
+      "feature_name": "feat_72",
+      "psi_score": 5.4453,
+      "ks_statistic": 0.635,
+      "ks_pvalue": 0.0,
+      "status": "DRIFT_DETECTED"
+    },
+    {
+      "feature_index": 73,
+      "feature_name": "feat_73",
+      "psi_score": 6.1132,
+      "ks_statistic": 0.59,
+      "ks_pvalue": 0.0,
+      "status": "DRIFT_DETECTED"
+    },
+    {
+      "feature_index": 74,
+      "feature_name": "feat_74",
+      "psi_score": 6.0376,
+      "ks_statistic": 0.69,
+      "ks_pvalue": 0.0,
+      "status": "DRIFT_DETECTED"
+    },
+    {
+      "feature_index": 75,
+      "feature_name": "feat_75",
+      "psi_score": 6.169,
+      "ks_statistic": 0.695,
+      "ks_pvalue": 0.0,
+      "status": "DRIFT_DETECTED"
+    },
+    {
+      "feature_index": 76,
+      "feature_name": "feat_76",
+      "psi_score": 5.2729,
+      "ks_statistic": 0.595,
+      "ks_pvalue": 0.0,
+      "status": "DRIFT_DETECTED"
+    }
+  ]
+}

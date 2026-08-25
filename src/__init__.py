@@ -7,6 +7,10 @@ from src.audio_io import (
     load_audio_from_bytes,
     load_audio_from_file,
 )
+from src.audio_processor import (
+    compute_snr_db,
+    load_audio_from_bytes as process_audio_bytes,
+)
 from src.config import (
     CLASS_MAPPING,
     CONFUSION_MATRIX_PNG,
@@ -41,8 +45,11 @@ from src.explainability import (
     get_global_feature_importance,
 )
 from src.features import (
+    TOTAL_DIMENSIONS,
+    extract_features,
     extract_features_from_audio,
     extract_features_from_file,
+    get_feature_names,
 )
 from src.model import (
     build_pipeline,
@@ -61,6 +68,7 @@ from src.scoring import (
     get_risk_band,
     predict_and_score,
 )
+from src.vad import VoiceActivityDetector
 from src.validation import (
     validate_audio_signal,
     validate_wav_bytes,
@@ -70,6 +78,7 @@ __all__ = [
     "SAMPLE_RATE",
     "N_MFCC",
     "TOTAL_FEATURES",
+    "TOTAL_DIMENSIONS",
     "FEATURE_CONFIG",
     "MANIFEST_PATH",
     "MODEL_PATH",
@@ -93,11 +102,16 @@ __all__ = [
     "MIN_AUDIO_RMS_ENERGY",
     "load_audio_from_bytes",
     "load_audio_from_file",
+    "process_audio_bytes",
     "get_audio_metadata",
+    "compute_snr_db",
+    "VoiceActivityDetector",
     "validate_wav_bytes",
     "validate_audio_signal",
+    "extract_features",
     "extract_features_from_audio",
     "extract_features_from_file",
+    "get_feature_names",
     "build_pipeline",
     "load_model",
     "load_metadata",

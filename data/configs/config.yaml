@@ -1,0 +1,26 @@
+# VoiceShield Global System & Streaming Configuration
+audio:
+  sample_rate: 16000
+  n_mfcc: 20
+  include_rms: true
+  include_zcr: true
+  min_duration_sec: 0.50
+  max_duration_sec: 30.0
+  max_file_size_mb: 15
+
+streaming:
+  window_ms: 160
+  stride_ms: 40
+  smoothing_alpha: 0.20
+  energy_threshold: 0.0001
+  max_simulation_windows: 50
+  simulated_delay_sec: 0.01
+
+model:
+  path: "models/voice_detector.pkl"
+  metadata_path: "models/model_metadata.json"
+  decision_threshold: 0.40
+
+disclaimer:
+  visible_notice: "Experimental decision-support prototype; not identity proof."
+  streaming_notice: "SANDBOX SIMULATION — NOT A LIVE CALL. This simulation demonstrates the processing flow only. It is not a telecom integration or production latency benchmark."

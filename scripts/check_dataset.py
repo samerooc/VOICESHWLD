@@ -74,25 +74,37 @@ def run_dataset_audit(manifest_path: str = MANIFEST_PATH) -> Dict[str, Any]:
             valid_records.append(r)
 
     # 2. Label & Split Validation
-    valid_labels = {"bona_fide", "spoof"}
-    valid_splits = {"train", "val", "test"}
+    valid_labels = {"bona_fide", "spoof", "0", "1", 0, 1}
+    valid_splits = {"train", "val", "validation", "test"}
     invalid_labels = []
     invalid_splits = []
     warnings_list: List[str] = []
 
     for r in records:
         fpath = r.get("path") or r.get("file_path", "")
-        lbl = r.get("label") or r.get("class_label", "unknown")
+        raw_lbl = r.get("label") if r.get("label") is not None else r.get("class_label", "unknown")
         sp = r.get("split", "unknown")
-        if lbl not in valid_labels:
-            invalid_labels.append({"path": fpath, "label": lbl})
+        if str(raw_lbl).lower() in ["0", "bona_fide", "real", "human"]:
+            lbl = "bona_fide"
+        elif str(raw_lbl).lower() in ["1", "spoof", "fake", "synthetic", "ai"]:
+            lbl = "spoof"
+        else:
+            lbl = str(raw_lbl)
+            invalid_labels.append({"path": fpath, "label": raw_lbl})
+
         if sp not in valid_splits:
             invalid_splits.append({"path": fpath, "split": sp})
 
     # 3. Class Distribution (bona_fide vs spoof)
-    class_counts: Dict[str, int] = {}
+    class_counts: Dict[str, int] = {"bona_fide": 0, "spoof": 0}
     for r in records:
-        lbl = r.get("label") or r.get("class_label", "unknown")
+        raw_lbl = r.get("label") if r.get("label") is not None else r.get("class_label", "unknown")
+        if str(raw_lbl).lower() in ["0", "bona_fide", "real", "human"]:
+            lbl = "bona_fide"
+        elif str(raw_lbl).lower() in ["1", "spoof", "fake", "synthetic", "ai"]:
+            lbl = "spoof"
+        else:
+            lbl = str(raw_lbl)
         class_counts[lbl] = class_counts.get(lbl, 0) + 1
 
     # Class imbalance check
@@ -107,13 +119,18 @@ def run_dataset_audit(manifest_path: str = MANIFEST_PATH) -> Dict[str, Any]:
     split_counts: Dict[str, Dict[str, int]] = {}
     for r in records:
         sp = r.get("split", "unknown")
-        lbl = r.get("label") or r.get("class_label", "unknown")
+        raw_lbl = r.get("label") if r.get("label") is not None else r.get("class_label", "unknown")
+        lbl = "bona_fide" if str(raw_lbl).lower() in ["0", "bona_fide", "real", "human"] else "spoof"
         if sp not in split_counts:
             split_counts[sp] = {}
         split_counts[sp][lbl] = split_counts[sp].get(lbl, 0) + 1
 
     # 5. Duration Statistics
-    durations = [float(r["duration_seconds"]) for r in valid_records if float(r.get("duration_seconds", 0)) > 0]
+    durations = [
+        float(r.get("duration_seconds") or r.get("duration_sec") or r.get("duration") or 0.0)
+        for r in valid_records
+        if float(r.get("duration_seconds") or r.get("duration_sec") or r.get("duration") or 0.0) > 0
+    ]
     dur_total = float(sum(durations)) if durations else 0.0
     dur_avg = float(np.mean(durations)) if durations else 0.0
     dur_min = float(np.min(durations)) if durations else 0.0

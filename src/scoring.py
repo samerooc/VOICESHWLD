@@ -22,6 +22,7 @@ from src.model_contract import (
 )
 from src.preprocessing import preprocess_audio
 from src.calibration import compute_risk_state, calibrate_probability
+from src.model import get_model_expected_features
 
 
 def calculate_risk_score(spoof_probability: float) -> int:
@@ -66,8 +67,29 @@ def predict_and_score(
     # 1. Standard Preprocessing & Diagnostic Metadata
     clean_audio, effective_sr, audio_diag = preprocess_audio(audio, sample_rate=sample_rate, target_sr=SAMPLE_RATE)
 
-    # 2. Extract global feature vector (42 features)
-    features = extract_features_from_audio(clean_audio, effective_sr)
+    # 2. Accurately detect expected feature dimension from model
+    expected_dim = get_model_expected_features(model)
+    if expected_dim == 42:
+        mode = "legacy"
+    elif expected_dim == 77:
+        mode = "extended"
+    elif expected_dim == 229:
+        mode = "advanced"
+    else:
+        mode = "step1"
+
+    # Extract global feature vector matching expected dimension
+    features = extract_features_from_audio(clean_audio, effective_sr, mode=mode)
+    if len(features) != expected_dim:
+        if expected_dim == 42:
+            features = extract_features_from_audio(clean_audio, effective_sr, mode="legacy")
+        elif expected_dim == 77:
+            features = extract_features_from_audio(clean_audio, effective_sr, mode="extended")
+        elif expected_dim == 229:
+            features = extract_features_from_audio(clean_audio, effective_sr, mode="advanced")
+        else:
+            features = extract_features_from_audio(clean_audio, effective_sr, mode="step1")
+
     x_global = features.reshape(1, -1)
 
     # 3. Global probability extraction
@@ -75,7 +97,7 @@ def predict_and_score(
     p_global_human, p_global_spoof = validate_model_probabilities(global_probs)
 
     # 4. Multi-segment temporal ensemble (Sliding window voting)
-    seg_features = extract_segmented_features(clean_audio, effective_sr, window_duration=2.5, hop_duration=1.0)
+    seg_features = extract_segmented_features(clean_audio, effective_sr, window_duration=2.5, hop_duration=1.0, mode=mode)
     valid_window_count = len(seg_features)
 
     if valid_window_count > 1:
@@ -84,7 +106,11 @@ def predict_and_score(
         seg_spoof_probs = seg_probs[:, 1]
         seg_median_spoof = float(np.median(seg_spoof_probs))
         
-        raw_spoof_prob = float(0.50 * p_global_spoof + 0.50 * seg_median_spoof)
+        if p_global_spoof < 0.25:
+            # Low global spoof evidence: protect bona fide voice from single noisy window artifacts
+            raw_spoof_prob = float(0.80 * p_global_spoof + 0.20 * seg_median_spoof)
+        else:
+            raw_spoof_prob = float(0.65 * p_global_spoof + 0.35 * seg_median_spoof)
         raw_human_prob = float(1.0 - raw_spoof_prob)
         human_prob, spoof_prob = validate_model_probabilities(np.array([raw_human_prob, raw_spoof_prob]))
     else:

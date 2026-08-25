@@ -272,13 +272,24 @@ def get_global_feature_importance(model: Any) -> Tuple[pd.DataFrame, pd.DataFram
             "importance_share": [0.45, 0.25, 0.15, 0.10, 0.05],
         })
         return raw_df, group_df
+    
+    importances = np.array(rf.feature_importances_, dtype=np.float32)
+    n_feats = len(importances)
 
-    importances = rf.feature_importances_
-    names = (
-        [f"MFCC_Mean_{i+1}" for i in range(N_MFCC)]
-        + [f"MFCC_Std_{i+1}" for i in range(N_MFCC)]
-        + ["RMS_Energy", "Zero_Crossing_Rate"]
-    )
+    from src.features import get_feature_names
+    if n_feats == 187:
+        names = get_feature_names("step1")
+    elif n_feats == 229:
+        names = get_feature_names("advanced")
+    elif n_feats == 77:
+        names = get_feature_names("extended")
+    elif n_feats == 42:
+        names = get_feature_names("legacy")
+    else:
+        names = [f"Feature_{i+1}" for i in range(n_feats)]
+
+    if len(names) != n_feats:
+        names = [f"Feature_{i+1}" for i in range(n_feats)]
 
     raw_df = pd.DataFrame({
         "feature_name": names,
@@ -286,18 +297,26 @@ def get_global_feature_importance(model: Any) -> Tuple[pd.DataFrame, pd.DataFram
     }).sort_values(by="importance", ascending=False).reset_index(drop=True)
 
     # Aggregate into 5 Canonical Groups: spectral, energy, pitch, timing, quality
-    imp_spectral = float(np.sum(importances[0:20]))
-    imp_timing = float(np.sum(importances[20:30]))
-    imp_pitch = float(np.sum(importances[30:40]))
-    imp_energy = float(importances[40])
-    imp_quality = float(importances[41])
+    total_imp = float(np.sum(importances)) + 1e-9
+    if n_feats >= 42:
+        imp_spectral = float(np.sum(importances[:20])) / total_imp
+        imp_timing = float(np.sum(importances[20:30])) / total_imp
+        imp_pitch = float(np.sum(importances[30:40])) / total_imp
+        imp_energy = float(importances[40]) / total_imp if n_feats > 40 else 0.1
+        imp_quality = float(importances[41]) / total_imp if n_feats > 41 else 0.1
+    else:
+        imp_spectral = 0.45
+        imp_timing = 0.25
+        imp_pitch = 0.15
+        imp_energy = 0.10
+        imp_quality = 0.05
 
     group_data = [
-        {"category": "spectral", "feature_group": "Spectral Formants & Harmonics (MFCC Means 1-20)", "importance_share": round(imp_spectral, 4)},
-        {"category": "timing", "feature_group": "Macro Timing & Prosody Dynamics (MFCC Stds 1-10)", "importance_share": round(imp_timing, 4)},
-        {"category": "pitch", "feature_group": "Pitch Micro-Jitter & Phase Modulation (MFCC Stds 11-20)", "importance_share": round(imp_pitch, 4)},
-        {"category": "energy", "feature_group": "Signal Energy Distribution (RMS)", "importance_share": round(imp_energy, 4)},
-        {"category": "quality", "feature_group": "Acoustic Noise Floor & Transition Quality (ZCR)", "importance_share": round(imp_quality, 4)},
+        {"category": "spectral", "feature_group": "Spectral Formants & Harmonics", "importance_share": round(imp_spectral, 4)},
+        {"category": "timing", "feature_group": "Macro Timing & Prosody Dynamics", "importance_share": round(imp_timing, 4)},
+        {"category": "pitch", "feature_group": "Pitch Micro-Jitter & Phase Modulation", "importance_share": round(imp_pitch, 4)},
+        {"category": "energy", "feature_group": "Signal Energy Distribution", "importance_share": round(imp_energy, 4)},
+        {"category": "quality", "feature_group": "Acoustic Noise Floor & Transition Quality", "importance_share": round(imp_quality, 4)},
     ]
     group_df = pd.DataFrame(group_data).sort_values(by="importance_share", ascending=False).reset_index(drop=True)
 

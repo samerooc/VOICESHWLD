@@ -18,7 +18,8 @@ def test_validate_model_probabilities_clean():
 
 def test_batch_vs_single_sample_invariance():
     model = joblib.load("models/voice_detector.pkl")
-    dummy_feat = np.random.normal(0, 1.0, (5, 42)).astype(np.float32)
+    n_feats = getattr(model, "n_features_in_", 42)
+    dummy_feat = np.random.normal(0, 1.0, (5, n_feats)).astype(np.float32)
 
     batch_probs = model.predict_proba(dummy_feat)
     for i in range(5):

@@ -11,6 +11,7 @@ import joblib
 
 from src.model_contract import validate_class_contract
 
+SUPPORTED_FEATURE_VERSIONS = ["1.0.0", "2.0.0", "2.1.0"]
 EXPECTED_FEATURE_VERSION: str = "1.0.0"
 EXPECTED_PREPROCESSING_VERSION: str = "1.0.0"
 
@@ -35,9 +36,9 @@ def verify_and_load_model(
 
     # 2. Check feature version and preprocessing version
     feat_ver = metadata.get("feature_version") or metadata.get("feature_configuration", {}).get("version", "1.0.0")
-    if feat_ver != EXPECTED_FEATURE_VERSION:
+    if feat_ver not in SUPPORTED_FEATURE_VERSIONS:
         raise ValueError(
-            f"Feature Version Mismatch: Expected '{EXPECTED_FEATURE_VERSION}', got '{feat_ver}'."
+            f"Feature Version Mismatch: Expected one of {SUPPORTED_FEATURE_VERSIONS}, got '{feat_ver}'."
         )
 
     # 3. Check class mapping

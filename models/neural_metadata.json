@@ -1,0 +1,109 @@
+{
+  "model_name": "VoiceShield Deep Learning Neural Classifier",
+  "model_version": "3.0.0",
+  "architecture": "VoiceShieldNeuralDetector (MultiHeadAttn + BinaryLogitHead)",
+  "model_artifact_path": "models/voiceshield_neural_best.pt",
+  "model_artifact_sha256": "cf3454e296a128c31d311a1ce8170bfbb07ffcafee390c0699e4e932dd949534",
+  "timestamp_utc": "2026-08-24T08:52:48.580270+00:00",
+  "total_epochs_trained": 7,
+  "best_epoch": 3,
+  "training_duration_seconds": 109.14,
+  "best_metrics": {
+    "loss": 0.01174584414277758,
+    "accuracy": 1.0,
+    "balanced_accuracy": 1.0,
+    "precision": 1.0,
+    "recall": 1.0,
+    "macro_f1": 1.0,
+    "roc_auc": 1.0,
+    "eer": 0.0,
+    "optimal_threshold": 0.46223369240760803,
+    "confusion_matrix": {
+      "tn": 3,
+      "fp": 0,
+      "fn": 0,
+      "tp": 32
+    }
+  },
+  "training_history": [
+    {
+      "epoch": 1,
+      "train_loss": 0.07586,
+      "val_loss": 0.0564,
+      "val_accuracy": 91.43,
+      "val_macro_f1": 0.8087,
+      "val_roc_auc": 0.9375,
+      "val_eer": 4.69,
+      "duration_sec": 15.17
+    },
+    {
+      "epoch": 2,
+      "train_loss": 0.05344,
+      "val_loss": 0.03581,
+      "val_accuracy": 80.0,
+      "val_macro_f1": 0.6225,
+      "val_roc_auc": 0.7396,
+      "val_eer": 26.04,
+      "duration_sec": 15.31
+    },
+    {
+      "epoch": 3,
+      "train_loss": 0.02632,
+      "val_loss": 0.01175,
+      "val_accuracy": 100.0,
+      "val_macro_f1": 1.0,
+      "val_roc_auc": 1.0,
+      "val_eer": 0.0,
+      "duration_sec": 15.38
+    },
+    {
+      "epoch": 4,
+      "train_loss": 0.01659,
+      "val_loss": 0.00573,
+      "val_accuracy": 100.0,
+      "val_macro_f1": 1.0,
+      "val_roc_auc": 1.0,
+      "val_eer": 0.0,
+      "duration_sec": 15.95
+    },
+    {
+      "epoch": 5,
+      "train_loss": 0.02215,
+      "val_loss": 0.00718,
+      "val_accuracy": 100.0,
+      "val_macro_f1": 1.0,
+      "val_roc_auc": 1.0,
+      "val_eer": 0.0,
+      "duration_sec": 15.74
+    },
+    {
+      "epoch": 6,
+      "train_loss": 0.01278,
+      "val_loss": 0.00483,
+      "val_accuracy": 100.0,
+      "val_macro_f1": 1.0,
+      "val_roc_auc": 1.0,
+      "val_eer": 0.0,
+      "duration_sec": 15.85
+    },
+    {
+      "epoch": 7,
+      "train_loss": 0.01304,
+      "val_loss": 0.0074,
+      "val_accuracy": 100.0,
+      "val_macro_f1": 1.0,
+      "val_roc_auc": 1.0,
+      "val_eer": 0.0,
+      "duration_sec": 15.62
+    }
+  ],
+  "hyperparameters": {
+    "loss": "BinaryFocalLossWithLogits (gamma=2.0, alpha=0.25)",
+    "batch_size": 8,
+    "lr_backbone": 1e-05,
+    "lr_head": 0.0001,
+    "weight_decay_backbone": 0.01,
+    "weight_decay_head": 0.001,
+    "scheduler": "CosineAnnealingLR"
+  }
+}
